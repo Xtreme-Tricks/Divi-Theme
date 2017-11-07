@@ -8,7 +8,6 @@
 #ninja_forms_form_209_all_fields_wrap .field-wrap,
 #ninja_forms_form_214_all_fields_wrap .field-wrap,
 #ninja_forms_form_219_all_fields_wrap .field-wrap,
-#ninja_forms_form_458_all_fields_wrap .field-wrap,
 #ninja_forms_form_234_all_fields_wrap .field-wrap,
 #ninja_forms_form_449_all_fields_wrap .field-wrap,
 #ninja_forms_form_246_all_fields_wrap .field-wrap,
@@ -59,8 +58,6 @@
 #ninja_forms_form_209_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_219_all_fields_wrap .field-wrap .input-counter,
 #ninja_forms_form_219_all_fields_wrap .ninja-forms-required-items,
-#ninja_forms_form_458_all_fields_wrap .field-wrap .input-counter,
-#ninja_forms_form_458_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_234_all_fields_wrap .field-wrap .input-counter,
 #ninja_forms_form_234_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_449_all_fields_wrap .field-wrap .input-counter,
@@ -588,27 +585,6 @@ body.et-pb-preview #main-content .container tr td {
     text-align: left
 }
 
-#ninja_forms_form_458_response_msg {
-    color: #fff
-}
-
-#ninja_forms_field_929,
-#ninja_forms_field_930,
-#ninja_forms_field_931,
-#ninja_forms_field_932
- {
-    height: 40px;
-    color: #fff;
-    background-color: rgba(255, 255, 255, .35);
-    text-align: center;
-    border: #fff
-}
-
-#ninja_forms_form_458_wrap .ninja-forms-form-title {
-    margin-right: 100px;
-    color: #666
-}
-
 #ninja_forms_field_239,
 #ninja_forms_field_240,
 #ninja_forms_field_553 {
@@ -628,19 +604,8 @@ body.et-pb-preview #main-content .container tr td {
     color: #fff
 }
 
-#ninja_forms_form_458 #ninja_forms_form_458_all_fields_wrap .field-wrap .ninja-forms-field {
-    border-radius: 5px;
-    line-height: 20px;
-    font-size: 16px;
-    font-family: Raleway;
-    width: 250px;
-    margin-left: 25px;
-    margin-bottom: 25px
-}
 
-#ninja_forms_field_929_div_wrap,
-#ninja_forms_field_930_div_wrap,
-#ninja_forms_field_932_div_wrap,
+
 #ninja_forms_field_840_div_wrap,
 #ninja_forms_field_911_div_wrap
  {
@@ -650,7 +615,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 #ninja_forms_field_532_div_wrap,
-#ninja_forms_field_931_div_wrap
  {
     width: 30%;
     display: inline-block
@@ -673,12 +637,6 @@ body.et-pb-preview #main-content .container tr td {
     background-color: rgba(255, 255, 255, .35)
 }
 
-#ninja_forms_field_933 {
-    height: 40px;
-    color: #fff;
-    text-align: center
-    
-}
 
 #ninja_forms_form_83_wrap .ninja-forms-form-title {
     margin-right: 100%;
@@ -844,10 +802,17 @@ body.et-pb-preview #main-content .container tr td {
 
 /*--end--*/
 
+/*SDM Landing Page and remarketing */
+
 #ninja_forms_field_530,
 #ninja_forms_field_531,
 #ninja_forms_field_532,
-#ninja_forms_field_825 {
+#ninja_forms_field_825,
+#ninja_forms_field_929,
+#ninja_forms_field_930,
+#ninja_forms_field_931,
+#ninja_forms_field_932
+ {
     height: 40px;
     color: #fff;
     width:100%;
@@ -855,6 +820,8 @@ body.et-pb-preview #main-content .container tr td {
     border: #fff;
     text-align: center
 }
+
+/*SDM Landing Page and remarketing end */
 
 #ninja_forms_field_239_div_wrap,
 #ninja_forms_field_240_div_wrap,
@@ -894,11 +861,15 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* Download Program Brochure 25 forms Code Starts from here */
-#ninja_forms_field_530,
+#ninja_forms_field_530, /* SDM Landing page */
 #ninja_forms_field_531,
 #ninja_forms_field_532,
-#ninja_forms_field_825_div_wrap,
-#ninja_forms_field_934,
+#ninja_forms_field_825_div_wrap, /* SDM Landing page end */
+#ninja_forms_field_929, /* Remarketing Landing page */
+#ninja_forms_field_930,
+#ninja_forms_field_931,
+#ninja_forms_field_932_div_wrap, /*Remarketing landing page end */
+#ninja_forms_field_934,  
 #ninja_forms_field_935,
 #ninja_forms_field_936,
 #ninja_forms_field_937_div_wrap,
@@ -1108,6 +1079,7 @@ body.et-pb-preview #main-content .container tr td {
 /*-- Start --*/
 #ninja_forms_form_229 #ninja_forms_form_229_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_463 #ninja_forms_form_463_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_458 #ninja_forms_form_458_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_509 #ninja_forms_form_509_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_513 #ninja_forms_form_513_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_517 #ninja_forms_form_517_all_fields_wrap .field-wrap .ninja-forms-field,
@@ -1162,9 +1134,12 @@ body.et-pb-preview #main-content .container tr td {
 
 /* ----- Download Proragam Brochure ----- */
 
-#ninja_forms_field_530_div_wrap,
+#ninja_forms_field_530_div_wrap,  /*SDM Lead Page start */
 #ninja_forms_field_531_div_wrap,
-#ninja_forms_field_532_div_wrap,
+#ninja_forms_field_532_div_wrap,  /*SDM Lead Page End */
+#ninja_forms_field_929_div_wrap,  /*Remarketing landing start */
+#ninja_forms_field_930_div_wrap,
+#ninja_forms_field_931_div_wrap,  /*Remarketing landing End */
 #ninja_forms_field_934_div_wrap,
 #ninja_forms_field_935_div_wrap,
 #ninja_forms_field_936_div_wrap,
@@ -1259,6 +1234,7 @@ body.et-pb-preview #main-content .container tr td {
 /* Download Program Brochure 25 Forms  */
             /*Start*/
 #ninja_forms_field_825_div_wrap,
+#ninja_forms_field_932_div_wrap,
 #ninja_forms_field_937_div_wrap,
 #ninja_forms_field_992_div_wrap,
 #ninja_forms_field_997_div_wrap,
@@ -1573,9 +1549,6 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_927_div_wrap,
     #ninja_forms_field_967_div_wrap,
     #ninja_forms_field_928_div_wrap,
-    #ninja_forms_field_929_div_wrap,
-    #ninja_forms_field_930_div_wrap,
-    #ninja_forms_field_931_div_wrap,
     #ninja_forms_field_954_div_wrap,
     #ninja_forms_field_955_div_wrap,
     #ninja_forms_field_956_div_wrap,
@@ -1591,11 +1564,16 @@ body.et-pb-preview #main-content .container tr td {
 /*----------- Start --------------*/
 
 @media screen and (max-width:910px) {
-    #ninja_forms_field_530_div_wrap, 
+    #ninja_forms_field_530_div_wrap, /*SDM Lead Page */ 
     #ninja_forms_field_531_div_wrap,
     #ninja_forms_field_532_div_wrap,
     #ninja_forms_field_825_div_wrap,
     #ninja_forms_field_533_div_wrap, 
+    #ninja_forms_field_929_div_wrap, /* Remarketing Lead Page */
+    #ninja_forms_field_930_div_wrap,
+    #ninja_forms_field_931_div_wrap,
+    #ninja_forms_field_932_div_wrap,
+    #ninja_forms_field_933_div_wrap, /*End remarketing */
     #ninja_forms_field_934_div_wrap, 
     #ninja_forms_field_935_div_wrap,
     #ninja_forms_field_936_div_wrap,
@@ -3289,29 +3267,7 @@ input[placeholder='Phone No'] {
     margin-bottom: 3.27%;
 }
 
-#ninja_forms_field_929_div_wrap,
-#ninja_forms_field_930_div_wrap,
-#ninja_forms_field_931_div_wrap,
-#ninja_forms_field_932_div_wrap {
-    width: 21%;
-    margin-right: 2.74%;
-    display: inline-block;
-    box-sizing: border-box;
-    margin-top: 10px
-}
 
-@media screen and (max-width:910px) {
-#ninja_forms_field_929_div_wrap,
-#ninja_forms_field_930_div_wrap,
-#ninja_forms_field_931_div_wrap,
-#ninja_forms_field_932_div_wrap,
-#ninja_forms_field_933_div_wrap
-{
-    margin-left: 3%;
-    width:22%;
-    display:block
- }
-}
 
 #wrapper {
     width: 100%;
