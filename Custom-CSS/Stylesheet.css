@@ -679,7 +679,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_954,
 #ninja_forms_field_955,
 #ninja_forms_field_956,
-#ninja_forms_field_957
+#ninja_forms_field_957,
+#ninja_forms_field_1149
+
  {
     height: 40px;
     color: #000;
@@ -859,7 +861,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_954,
 #ninja_forms_field_955,
 #ninja_forms_field_956,
-#ninja_forms_field_957_div_wrap
+#ninja_forms_field_957_div_wrap,
+#ninja_forms_field_1149_div_wrap
 {
     margin-right: 20px
 }
@@ -1079,7 +1082,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_475 #ninja_forms_form_475_all_fields_wrap .field-wrap .ninja-forms-field {
     border-radius: 5px;
     line-height: 18px;
-    margin-right: 4.5px;
+    margin-right: 2.5px;
     font-size: 16px;
     font-family: Raleway
 }
@@ -1134,14 +1137,24 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_920_div_wrap,
 #ninja_forms_field_925_div_wrap,
 #ninja_forms_field_926_div_wrap,
-#ninja_forms_field_927_div_wrap,
-#ninja_forms_field_954_div_wrap,
-#ninja_forms_field_955_div_wrap,
-#ninja_forms_field_956_div_wrap {
+#ninja_forms_field_927_div_wrap
+{
     margin-right: 20px;
     width: 22%;
     display: inline-block
 }
+
+#ninja_forms_field_954_div_wrap,
+#ninja_forms_field_955_div_wrap,
+#ninja_forms_field_956_div_wrap,
+#ninja_forms_field_957_div_wrap,
+#ninja_forms_field_1149_div_wrap
+{
+    margin-right: 15px;
+    width: 18%;
+    display: inline-block
+}
+
 
 /* ----- Download Proragam Brochure ----- */
 
@@ -1238,10 +1251,14 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_555_div_wrap, 
 #ninja_forms_field_916_div_wrap,
 #ninja_forms_field_921_div_wrap,
-#ninja_forms_field_957_div_wrap,
 #ninja_forms_field_967_div_wrap
 {
     width: 22%;
+    display: inline-block
+}
+
+#ninja_forms_field_1149_div_wrap {
+    width: 18%;
     display: inline-block
 }
 
@@ -1568,6 +1585,7 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_955_div_wrap,
     #ninja_forms_field_956_div_wrap,
     #ninja_forms_field_957_div_wrap,
+    #ninja_forms_field_1149_div_wrap,
     #ninja_forms_field_958_div_wrap  {
         width: 100%;
         margin-top: 10px;
