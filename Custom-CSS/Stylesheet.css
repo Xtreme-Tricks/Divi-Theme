@@ -2922,15 +2922,26 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_959,
 #ninja_forms_field_960,
 #ninja_forms_field_961,
-#ninja_forms_field_963,
-#ninja_forms_field_964,
-#ninja_forms_field_965,
 #ninja_forms_field_1114,
 #ninja_forms_field_1115,
 #ninja_forms_field_1116
  {
     height: 40px;
     color: #fff;
+    background-color: rgba(255, 255, 255, .35);
+    border-radius: 5px;
+    text-align: center;
+    border: #fff;
+    font-family: lato;
+    font-size: 16px
+}
+
+#ninja_forms_field_963,
+#ninja_forms_field_964,
+#ninja_forms_field_965
+{
+    height: 40px;
+    color: #222;
     background-color: rgba(255, 255, 255, .35);
     border-radius: 5px;
     text-align: center;
