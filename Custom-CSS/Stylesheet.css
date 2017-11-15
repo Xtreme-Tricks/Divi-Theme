@@ -697,6 +697,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_935,
 #ninja_forms_field_936,
 #ninja_forms_field_937,
+#ninja_forms_field_959,
+#ninja_forms_field_960,
+#ninja_forms_field_961,
+#ninja_forms_field_1151,
 #ninja_forms_field_989,
 #ninja_forms_field_990,
 #ninja_forms_field_991,
@@ -868,18 +872,22 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* Download Program Brochure 25 forms Code Starts from here */
-#ninja_forms_field_530, /* SDM Landing page */
+#ninja_forms_field_530,                                         /* SDM Landing page */
 #ninja_forms_field_531,
 #ninja_forms_field_532,
-#ninja_forms_field_825_div_wrap, /* SDM Landing page end */
-#ninja_forms_field_929, /* Remarketing Landing page */
+#ninja_forms_field_825_div_wrap,                                /* SDM Landing page end */
+#ninja_forms_field_929,                                         /* Remarketing Landing page */
 #ninja_forms_field_930,
 #ninja_forms_field_931,
-#ninja_forms_field_932_div_wrap, /*Remarketing landing page end */
+#ninja_forms_field_932_div_wrap,                                /*Remarketing landing page end */
 #ninja_forms_field_934,  
 #ninja_forms_field_935,
 #ninja_forms_field_936,
 #ninja_forms_field_937_div_wrap,
+#ninja_forms_field_959,
+#ninja_forms_field_960,
+#ninja_forms_field_961,
+#ninja_forms_field_1151_div_wrap,
 #ninja_forms_field_989,
 #ninja_forms_field_990,
 #ninja_forms_field_991,
@@ -1029,6 +1037,7 @@ body.et-pb-preview #main-content .container tr td {
 /*Download Brochure and Curriculum align center code */
 /* --- Start --- */
 #nf_submit_463,
+#nf_submit_479,
 #nf_submit_509,
 #nf_submit_513,
 #nf_submit_517,
@@ -1093,6 +1102,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_229 #ninja_forms_form_229_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_463 #ninja_forms_form_463_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_458 #ninja_forms_form_458_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_479 #ninja_forms_form_479_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_509 #ninja_forms_form_509_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_513 #ninja_forms_form_513_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_517 #ninja_forms_form_517_all_fields_wrap .field-wrap .ninja-forms-field,
@@ -1167,6 +1177,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_934_div_wrap,
 #ninja_forms_field_935_div_wrap,
 #ninja_forms_field_936_div_wrap,
+#ninja_forms_field_959_div_wrap,
+#ninja_forms_field_960_div_wrap,
+#ninja_forms_field_961_div_wrap,
 #ninja_forms_field_989_div_wrap,
 #ninja_forms_field_990_div_wrap,
 #ninja_forms_field_991_div_wrap,
@@ -1291,7 +1304,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1097_div_wrap,
 #ninja_forms_field_1102_div_wrap,
 #ninja_forms_field_1107_div_wrap,
-#ninja_forms_field_1147_div_wrap
+#ninja_forms_field_1147_div_wrap,
+#ninja_forms_field_1151_div_wrap
 {
     width: 22%;
     display: inline-block
@@ -1611,6 +1625,11 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_936_div_wrap,
     #ninja_forms_field_937_div_wrap,
     #ninja_forms_field_938_div_wrap,
+    #ninja_forms_field_959_div_wrap,
+    #ninja_forms_field_960_div_wrap,
+    #ninja_forms_field_961_div_wrap,
+    #ninja_forms_field_1151_div_wrap,
+    #ninja_forms_field_962_div_wrap,
     #ninja_forms_field_989_div_wrap,
     #ninja_forms_field_990_div_wrap,
     #ninja_forms_field_991_div_wrap,
