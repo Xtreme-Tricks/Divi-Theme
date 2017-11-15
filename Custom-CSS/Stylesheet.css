@@ -1522,6 +1522,7 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_483,
 #nf_submit_500,
 #nf_submit_609,
+#nf_submit_634,
 #nf_submit_7
  {
     text-align: center;
@@ -2903,7 +2904,10 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_982_div_wrap,
 #ninja_forms_field_1114_div_wrap,
 #ninja_forms_field_1115_div_wrap,
-#ninja_forms_field_1116_div_wrap
+#ninja_forms_field_1116_div_wrap,
+#ninja_forms_field_1152_div_wrap,
+#ninja_forms_field_1153_div_wrap,
+#ninja_forms_field_1154_div_wrap
  {
     width: 30%;
     margin-right: 3%;
@@ -2968,7 +2972,10 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_762,
 #ninja_forms_field_980,
 #ninja_forms_field_981,
-#ninja_forms_field_982
+#ninja_forms_field_982,
+#ninja_forms_field_1152,
+#ninja_forms_field_1153,
+#ninja_forms_field_1154
 {
     height: 40px;
     color: #222;
@@ -2985,7 +2992,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_form_389_all_fields_wrap,
 #ninja_forms_form_483_all_fields_wrap, 
 #ninja_forms_form_500_all_fields_wrap,
-#ninja_forms_form_609_all_fields_wrap, 
+#ninja_forms_form_609_all_fields_wrap,
+#ninja_forms_form_634_all_fields_wrap,  
 .ninja-forms-required-items, {
     margin-left: 0;
     margin-bottom: 5px
@@ -3003,7 +3011,8 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_904_div_wrap,
     #ninja_forms_field_963_div_wrap,
     #ninja_forms_field_980_div_wrap,
-    #ninja_forms_field_1114_div_wrap {
+    #ninja_forms_field_1114_div_wrap,
+    #ninja_forms_field_1152_div_wrap, {
         width: 100%;
         display: inline-block;
         margin-top: 10px
@@ -3234,7 +3243,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_895,
 #ninja_forms_field_899,
 #ninja_forms_field_903,
-#ninja_forms_field_907
+#ninja_forms_field_907,
+#ninja_forms_field_1155
 {
     color: #fff;
     border-color: #fff;
@@ -3463,7 +3473,10 @@ margin-left: 10%
    #ninja_forms_field_850_div_wrap,
    #ninja_forms_field_980_div_wrap, 
    #ninja_forms_field_981_div_wrap, 
-   #ninja_forms_field_982_div_wrap
+   #ninja_forms_field_982_div_wrap,
+   #ninja_forms_field_1152_div_wrap, 
+   #ninja_forms_field_1153_div_wrap, 
+   #ninja_forms_field_1154_div_wrap
     {
         width: 100%;
         margin-top: 10px;
