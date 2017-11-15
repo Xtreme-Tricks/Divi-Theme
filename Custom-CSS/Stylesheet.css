@@ -1505,7 +1505,6 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_437,
 #nf_submit_379,
 #nf_submit_454,
-#nf_submit_479,
 #nf_submit_483,
 #nf_submit_500,
 #nf_submit_609,
@@ -2877,9 +2876,6 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_904_div_wrap,
 #ninja_forms_field_905_div_wrap,
 #ninja_forms_field_906_div_wrap,
-#ninja_forms_field_959_div_wrap,
-#ninja_forms_field_960_div_wrap,
-#ninja_forms_field_961_div_wrap,
 #ninja_forms_field_963_div_wrap,
 #ninja_forms_field_964_div_wrap,
 #ninja_forms_field_965_div_wrap,
@@ -2919,9 +2915,6 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_904,
 #ninja_forms_field_905,
 #ninja_forms_field_906,
-#ninja_forms_field_959,
-#ninja_forms_field_960,
-#ninja_forms_field_961,
 #ninja_forms_field_1114,
 #ninja_forms_field_1115,
 #ninja_forms_field_1116
@@ -2989,7 +2982,6 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_896_div_wrap,
     #ninja_forms_field_900_div_wrap,
     #ninja_forms_field_904_div_wrap,
-    #ninja_forms_field_959_div_wrap,
     #ninja_forms_field_963_div_wrap,
     #ninja_forms_field_980_div_wrap,
     #ninja_forms_field_1114_div_wrap {
@@ -3015,8 +3007,6 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_902_div_wrap,
     #ninja_forms_field_905_div_wrap,
     #ninja_forms_field_906_div_wrap,
-    #ninja_forms_field_960_div_wrap,
-    #ninja_forms_field_961_div_wrap,
     #ninja_forms_field_964_div_wrap,
     #ninja_forms_field_965_div_wrap,
     #ninja_forms_field_981_div_wrap,
@@ -3081,7 +3071,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_821_div_wrap,
 #ninja_forms_field_950_div_wrap,
 #ninja_forms_field_968_div_wrap,
-#ninja_forms_field_1110_div_wrap {
+#ninja_forms_field_1110_div_wrap,
+#ninja_forms_field_1156_div_wrap {
     width: 92%;
     margin-left: 4%;
     display: inline-block;
@@ -3113,7 +3104,9 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_969_div_wrap,
 #ninja_forms_field_970_div_wrap,
 #ninja_forms_field_1111_div_wrap,
-#ninja_forms_field_1112_div_wrap {
+#ninja_forms_field_1112_div_wrap,
+#ninja_forms_field_1157_div_wrap,
+#ninja_forms_field_1158_div_wrap {
     width: 92%;
     margin-left: 4%;
     display: inline-block;
@@ -3131,6 +3124,7 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_821,
 #ninja_forms_field_852,
 #ninja_forms_field_853,
+#ninja_forms_field_854,
 #ninja_forms_field_860,
 #ninja_forms_field_861,
 #ninja_forms_field_862,
@@ -3149,7 +3143,6 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_880,
 #ninja_forms_field_881,
 #ninja_forms_field_882,
-#ninja_forms_field_854,
 #ninja_forms_field_950,
 #ninja_forms_field_951,
 #ninja_forms_field_952,
@@ -3158,7 +3151,10 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_970,
 #ninja_forms_field_1110,
 #ninja_forms_field_1111,
-#ninja_forms_field_1112
+#ninja_forms_field_1112,
+#ninja_forms_field_1156,
+#ninja_forms_field_1157,
+#ninja_forms_field_1158
  {
     height: 40px;
     color: #f9f9f9;
@@ -3182,7 +3178,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_855,
 #ninja_forms_field_953,
 #ninja_forms_field_971,
-#ninja_forms_field_1113 {
+#ninja_forms_field_1113,
+#ninja_forms_field_1159 {
     width: 92%;
     background: #29aae1;
     padding: 12px 0;
@@ -3218,8 +3215,7 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_895,
 #ninja_forms_field_899,
 #ninja_forms_field_903,
-#ninja_forms_field_907,
-#ninja_forms_field_962
+#ninja_forms_field_907
 {
     color: #fff;
     border-color: #fff;
