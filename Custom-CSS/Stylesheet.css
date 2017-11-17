@@ -594,7 +594,8 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_229,
 #nf_submit_458,
 #nf_submit_614,
-#nf_submit_189
+#nf_submit_189,
+#nf_submit_642
  {
     text-align: center;
     margin-top: 4%
@@ -1949,7 +1950,8 @@ body.et-pb-preview #main-content .container tr td {
 
 #ninja_forms_field_30:hover,
 #ninja_forms_field_533:hover,
-#ninja_forms_field_933:hover
+#ninja_forms_field_933:hover,
+#ninja_forms_field_1168:hover
  {
     cursor: pointer
 }
@@ -2006,8 +2008,10 @@ body.et-pb-preview #main-content .container tr td {
     padding-right: 2em
 }
 
-#ninja_forms_field_30{
-    font-family: arial
+#ninja_forms_field_30,
+#ninja_forms_field_1168 
+{
+    font-family: Arial
 }
 
 #ninja_forms_field_690 option,
@@ -2424,12 +2428,29 @@ body.et-pb-preview #main-content .container tr td {
     margin-left: 0%
 }
 
+#ninja_forms_field_1168 {
+    font-size: 16px;
+    width: 100%;
+    font-family: arial;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background: #27aae1;
+    padding: .65em 1.5em;
+    margin-left: 0%
+}
+
 #ninja_forms_field_30,
 #ninja_forms_field_361 {
     width: 12%;
     margin-left: 44%;
     margin-right: 44%
 }
+
+#ninja_forms_field_1168 {
+    width: 50%;
+}
+
 
 #ninja-forms-field-65-options,
 #ninja_forms_field_106_div_wrap,
@@ -2500,6 +2521,13 @@ body.et-pb-preview #main-content .container tr td {
     color: #f9f9f9;
     border: 1px solid;
     transition-duration: .4s;
+    font-family: arial;
+}
+#ninja_forms_field_1168:hover
+{    
+    cursor: pointer;
+    background: #2e6da4;
+    color: #f9f9f9;
     font-family: arial;
 }
 
@@ -2614,7 +2642,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1127,
 #ninja_forms_field_1132 {
     font-size: 16px;
-    color: #fff;
+    color: #222;
     height: 40px;
     line-height: 20px;
     border-radius: 5px;
@@ -2623,6 +2651,71 @@ body.et-pb-preview #main-content .container tr td {
     width: 80%;
     margin-left: 10%;
 }
+
+/*Careers Form */
+
+#ninja_forms_field_1160,
+#ninja_forms_field_1161,
+#ninja_forms_field_1162,
+#ninja_forms_field_1163,
+#ninja_forms_field_1164,
+#ninja_forms_field_1165,
+#ninja_forms_field_1166,
+#ninja_forms_field_1167
+{
+    font-size: 16px;
+    font-family: lato;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#ninja_forms_field_1160_label,
+#ninja_forms_field_1161_label,
+#ninja_forms_field_1162_label,
+#ninja_forms_field_1163_label,
+#ninja_forms_field_1164_label,
+#ninja_forms_field_1165_label,
+#ninja_forms_field_1166_label,
+#ninja_forms_field_1167_label
+{
+    font-size: 18px;
+    font-family: lato;
+    color: #222;
+    margin-left: 10%;
+}
+
+#ninja_forms_field_1160_error,
+#ninja_forms_field_1161_error,
+#ninja_forms_field_1162_error,
+#ninja_forms_field_1163_error,
+#ninja_forms_field_1164_error,
+#ninja_forms_field_1165_error,
+#ninja_forms_field_1166_error,
+#ninja_forms_field_1167_error
+{
+    font-size: 18px;
+    font-family: lato;
+    margin-left: 10%;
+}
+
+#ninja_forms_form_642_response_msg
+{
+
+    font-size: 18px;
+    font-family: lato;
+    margin-left: 10%;
+}
+}
+
+
+/*Careers Form end */
 
 #ninja_forms_field_136,
 #ninja_forms_field_410,
@@ -2686,7 +2779,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_50 option,
 #ninja_forms_field_840 option,
 #ninja_forms_field_911 option,
-#ninja_forms_field_932 option  {
+#ninja_forms_field_932 option,
+#ninja_forms_field_1162 option
+  {
     color: #222;
 }
 
