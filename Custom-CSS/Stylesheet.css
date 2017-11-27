@@ -685,8 +685,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_955,
 #ninja_forms_field_956,
 #ninja_forms_field_957,
-#ninja_forms_field_1149
-
+#ninja_forms_field_1149,
+#ninja_forms_field_1174,
+#ninja_forms_field_1177,
+#ninja_forms_field_1176,
+#ninja_forms_field_1180
  {
     height: 40px;
     color: #000;
@@ -871,7 +874,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_955,
 #ninja_forms_field_956,
 #ninja_forms_field_957_div_wrap,
-#ninja_forms_field_1149_div_wrap
+#ninja_forms_field_1149_div_wrap,
+#ninja_forms_field_1174,
+#ninja_forms_field_1174,
+#ninja_forms_field_1176_div_wrap,
+#ninja_forms_field_1180
 {
     margin-right: 20px
 }
@@ -1159,7 +1166,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_920_div_wrap,
 #ninja_forms_field_925_div_wrap,
 #ninja_forms_field_926_div_wrap,
-#ninja_forms_field_927_div_wrap
+#ninja_forms_field_927_div_wrap,
+#ninja_forms_field_1174_div_wrap,
+#ninja_forms_field_1177_div_wrap,
+#ninja_forms_field_1180_div_wrap
 {
     margin-right: 20px;
     width: 22%;
@@ -1276,7 +1286,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_555_div_wrap, 
 #ninja_forms_field_916_div_wrap,
 #ninja_forms_field_921_div_wrap,
-#ninja_forms_field_967_div_wrap
+#ninja_forms_field_967_div_wrap,
+#ninja_forms_field_1176_div_wrap
 {
     width: 22%;
     display: inline-block
@@ -1612,7 +1623,12 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_956_div_wrap,
     #ninja_forms_field_957_div_wrap,
     #ninja_forms_field_1149_div_wrap,
-    #ninja_forms_field_958_div_wrap  {
+    #ninja_forms_field_958_div_wrap,
+    #ninja_forms_field_1174_div_wrap,
+    #ninja_forms_field_1177_div_wrap,
+    #ninja_forms_field_1180_div_wrap,
+    #ninja_forms_field_1176_div_wrap,
+    #ninja_forms_field_1176_div_wrap  {
         width: 100%;
         margin-top: 10px;
         display: inline-block
@@ -2403,10 +2419,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1142,
 #ninja_forms_field_1169,
 #ninja_forms_field_1171,
-#ninja_forms_field_1172,
-#ninja_forms_field_1174,
-#ninja_forms_field_1176,
-#ninja_forms_field_1177 {
+#ninja_forms_field_1172 {
     font-size: 16px;
     color: #fff;
     height: 40px;
@@ -2872,7 +2885,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_840 option,
 #ninja_forms_field_911 option,
 #ninja_forms_field_932 option,
-#ninja_forms_field_1162 option
+#ninja_forms_field_1162 option,
+#ninja_forms_field_1180 option
   {
     color: #222;
 }
@@ -2932,15 +2946,9 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1169_div_wrap,
 #ninja_forms_field_1171_div_wrap,
 #ninja_forms_field_1172_div_wrap,
-#ninja_forms_field_1174_div_wrap,
-#ninja_forms_field_1176_div_wrap,
-#ninja_forms_field_1177_div_wrap,
 #ninja_forms_field_1169_div_wrap,
 #ninja_forms_field_1171_div_wrap,
-#ninja_forms_field_1172_div_wrap,
-#ninja_forms_field_1174_div_wrap,
-#ninja_forms_field_1176_div_wrap,
-#ninja_forms_field_1177_div_wrap {
+#ninja_forms_field_1172_div_wrap {
     width: 30%;
     margin-right: 3%;
     display: inline-block;
@@ -2995,9 +3003,7 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_1141_div_wrap,
     #ninja_forms_field_1142_div_wrap,
     #ninja_forms_field_1171_div_wrap,
-    #ninja_forms_field_1172_div_wrap,
-    #ninja_forms_field_1176_div_wrap,
-    #ninja_forms_field_1177_div_wrap {
+    #ninja_forms_field_1172_div_wrap {
         margin-top: -15px;
         width: 100%;
         display: inline-block
