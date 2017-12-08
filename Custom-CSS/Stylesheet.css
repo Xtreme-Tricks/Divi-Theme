@@ -1043,7 +1043,8 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_209,
 #nf_submit_214,
 #nf_submit_219,
-#nf_submit_623
+#nf_submit_623,
+#nf_submit_838
 {
     text-align: center;
     margin-top: 3%
@@ -1078,7 +1079,7 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_591,
 #nf_submit_597,
 #nf_submit_601,
-#nf_submit_628
+#nf_submit_369
  {
     text-align: center;
     margin-top: 3%
@@ -1115,6 +1116,7 @@ body.et-pb-preview #main-content .container tr td {
 
 /*-- Start --*/
 #ninja_forms_form_229 #ninja_forms_form_229_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_369 #ninja_forms_form_369_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_463 #ninja_forms_form_463_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_458 #ninja_forms_form_458_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_479 #ninja_forms_form_479_all_fields_wrap .field-wrap .ninja-forms-field,
@@ -1992,6 +1994,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_121_div_wrap,
 #ninja_forms_field_361_div_wrap,
 #ninja_forms_field_377_div_wrap,
+#ninja_forms_field_838_div_wrap,
 #ninja_forms_field_1168_div_wrap
 {
     text-align: center;
@@ -2491,8 +2494,7 @@ body.et-pb-preview #main-content .container tr td {
     padding: .65em 1em
 }
 
-#ninja_forms_field_753:hover,
-#ninja_forms_field_838:hover {
+#ninja_forms_field_753:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, .15);
     color: #f9f9f9;
@@ -3002,8 +3004,8 @@ input[placeholder='Phone No'] {
         display: inline-block
     }
 
-    #ninja_forms_field_753_div_wrap, 
-    #ninja_forms_field_838_div_wrap {
+    #ninja_forms_field_753_div_wrap
+    {
         margin-left: -65px
     }
     #ninja_forms_field_232_div_wrap,
@@ -3618,19 +3620,6 @@ body {
   overflow-y: scroll;
 }
 
-#ninja_forms_field_838 {
-    color: #fff;
-    background: rgba(255, 255, 255, .3);
-    border-color: #fff;
-    font-family: Raleway;
-    letter-spacing: 0px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 1%;
-    text-align: center;
-    margin-left: 43%;
-}
-
 
 #ninja_forms_field_840,
 #ninja_forms_field_911 { {
@@ -3661,15 +3650,6 @@ margin-left: 1%;
 width:99%;
 display:block
  }
-}
-
-@media screen and (max-width:910px) {
-#ninja_forms_field_838_div_wrap
-{
-    margin-left: 10%;
-    width:200%;
-    display:inline-block;
-}
 }
 
 #ninja_forms_field_92_label, 
