@@ -3260,7 +3260,7 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_963_div_wrap,
     #ninja_forms_field_980_div_wrap,
     #ninja_forms_field_1114_div_wrap,
-    #ninja_forms_field_1152_div_wrap, {
+    #ninja_forms_field_1152_div_wrap {
         width: 100%;
         display: inline-block;
         margin-top: 10px
@@ -3753,7 +3753,7 @@ margin-left: 10%
     right: 20px;
     height: 50px;
     line-height: 50px;
-    padding: 0px 85px;
+    padding: 0px 90px;
     background: #34495e;
     color: #fff;
     border-radius: 50px;
