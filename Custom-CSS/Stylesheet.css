@@ -699,6 +699,11 @@ body.et-pb-preview #main-content .container tr td {
     text-align: center
 }
 
+#ninja_forms_field_1196
+{
+   display: none; 
+}
+
 /*Download Detailed Curriculum 25 Forms CSS */
 
 #ninja_forms_field_934,
@@ -1044,6 +1049,7 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_214,
 #nf_submit_219,
 #nf_submit_623,
+#nf_submit_628,
 #nf_submit_838
 {
     text-align: center;
@@ -1984,7 +1990,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_377:hover,
 #ninja_forms_field_533:hover,
 #ninja_forms_field_933:hover,
-#ninja_forms_field_1168:hover
+#ninja_forms_field_1168:hover,
+#ninja_forms_field_1213:hover
  {
     cursor: pointer;
     text-align: center
@@ -1995,7 +2002,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_361_div_wrap,
 #ninja_forms_field_377_div_wrap,
 #ninja_forms_field_838_div_wrap,
-#ninja_forms_field_1168_div_wrap
+#ninja_forms_field_1168_div_wrap,
+#ninja_forms_field_1213_div_wrap
 {
     text-align: center;
     margin-top: 3%
@@ -2058,7 +2066,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_121,
 #ninja_forms_field_361,
 #ninja_forms_field_377,
-#ninja_forms_field_1168
+#ninja_forms_field_1168,
+#ninja_forms_field_1213
 {
     font-family: lato
 }
@@ -2428,7 +2437,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_121,
 #ninja_forms_field_361,
 #ninja_forms_field_377,
-#ninja_forms_field_1168 {
+#ninja_forms_field_1168,
+#ninja_forms_field_1213
+ {
     font-size: 16px;
     width: 50%;
     font-family: arial;
@@ -2527,7 +2538,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_121:hover,
 #ninja_forms_field_361:hover,
 #ninja_forms_field_377:hover,
-#ninja_forms_field_1168:hover
+#ninja_forms_field_1168:hover,
+#ninja_forms_field_1213:hover
 {    
     cursor: pointer;
     background: #2e6da4;
@@ -2674,7 +2686,13 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1164,
 #ninja_forms_field_1165,
 #ninja_forms_field_1166,
-#ninja_forms_field_1167
+#ninja_forms_field_1167,
+#ninja_forms_field_1197,
+#ninja_forms_field_1198,
+#ninja_forms_field_1199,
+#ninja_forms_field_1201,
+#ninja_forms_field_1202,
+#ninja_forms_field_1209
 {
     font-size: 16px;
     font-family: lato;
@@ -2690,7 +2708,10 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* text area */
-#ninja_forms_field_689 {
+#ninja_forms_field_689,
+#ninja_forms_field_1200,
+#ninja_forms_field_1203,
+#ninja_forms_field_1204 {
     font-size: 16px;
     font-family: lato;
     color: #222;
@@ -2751,12 +2772,29 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1165_label,
 #ninja_forms_field_1166_label,
 #ninja_forms_field_1167_label,
-#ninja_forms_field_1187_label
+#ninja_forms_field_1187_label,
+#ninja_forms_field_1197_label,
+#ninja_forms_field_1198_label,
+#ninja_forms_field_1199_label,
+#ninja_forms_field_1200_label,
+#ninja_forms_field_1201_label,
+#ninja_forms_field_1202_label,
+#ninja_forms_field_1203_label,
+#ninja_forms_field_1204_label,
+#ninja_forms_field_1205_label,
+#ninja_forms_field_1208_label,
+#ninja_forms_field_1209_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
     margin-left: 10%;
+}
+
+#ninja_forms_field_1206_div_wrap {
+    font-size: 18px;
+    font-family: lato;
+    color: #222;
 }
 
 #ninja_forms_field_115_0_label,
@@ -2786,7 +2824,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_116_17_label,
 #ninja_forms_field_119_0_label,
 #ninja_forms_field_119_1_label,
-#ninja_forms_field_119_2_label
+#ninja_forms_field_119_2_label,
+#ninja_forms_field_1208_0_label,
+#ninja_forms_field_1208_1_label
 {
     font-size: 18px;
     font-family: lato;
@@ -2839,7 +2879,19 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1164_error,
 #ninja_forms_field_1165_error,
 #ninja_forms_field_1166_error,
-#ninja_forms_field_1167_error
+#ninja_forms_field_1167_error,
+#ninja_forms_field_1197_error,
+#ninja_forms_field_1198_error,
+#ninja_forms_field_1199_error,
+#ninja_forms_field_1200_error,
+#ninja_forms_field_1201_error,
+#ninja_forms_field_1202_error,
+#ninja_forms_field_1203_error,
+#ninja_forms_field_1204_error,
+#ninja_forms_field_1205_error,
+#ninja_forms_field_1206_error,
+#ninja_forms_field_1208_error,
+#ninja_forms_field_1209_error
 {
     font-size: 18px;
     font-family: lato;
@@ -2851,7 +2903,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_120_response_msg,
 #ninja_forms_form_642_response_msg,
 #ninja_forms_field_66_div_wrap p,
-#ninja_forms_form_7_response_msg
+#ninja_forms_form_7_response_msg,
+#ninja_forms_form_674_response_msg
 {
     font-size: 18px;
     text-align: center;
