@@ -711,7 +711,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1290,
 #ninja_forms_field_1291,
 #ninja_forms_field_1294,
-#ninja_forms_field_1342
+#ninja_forms_field_1342,
+#ninja_forms_field_1343,
+#ninja_forms_field_1344
 {
    display: none; 
 }
@@ -3066,6 +3068,12 @@ body.et-pb-preview #main-content .container tr td {
     margin-left: 10%;
 }
 
+/* White Label */
+
+#ninja_forms_field_536_label,
+#ninja_forms_field_554_label,
+#ninja_forms_field_555_label,
+#ninja_forms_field_556_label,
 #ninja_forms_field_918_label,
 #ninja_forms_field_919_label,
 #ninja_forms_field_920_label,
@@ -3074,10 +3082,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_935_label,
 #ninja_forms_field_936_label,
 #ninja_forms_field_937_label,
-#ninja_forms_field_536_label,
-#ninja_forms_field_554_label,
-#ninja_forms_field_555_label,
-#ninja_forms_field_556_label,
+#ninja_forms_field_939_label,
+#ninja_forms_field_940_label,
+#ninja_forms_field_941_label,
+#ninja_forms_field_942_label,
 #ninja_forms_field_1174_label,
 #ninja_forms_field_1176_label,
 #ninja_forms_field_1177_label,
