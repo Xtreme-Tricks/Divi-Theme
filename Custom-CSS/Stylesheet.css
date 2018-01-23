@@ -2892,7 +2892,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1335,
 #ninja_forms_field_1336,
 #ninja_forms_field_1337,
-#ninja_forms_field_1339
+#ninja_forms_field_1339,
+#ninja_forms_field_1345
 {
     font-size: 16px;
     font-family: lato;
@@ -3060,7 +3061,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1337_label,
 #ninja_forms_field_1338_label,
 #ninja_forms_field_1339_label,
-#ninja_forms_field_1341_label
+#ninja_forms_field_1341_label,
+#ninja_forms_field_1345_label
 {
     font-size: 18px;
     font-family: lato;
@@ -3078,6 +3080,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_919_label,
 #ninja_forms_field_920_label,
 #ninja_forms_field_921_label,
+#ninja_forms_field_929_label,
+#ninja_forms_field_930_label,
+#ninja_forms_field_931_label,
+#ninja_forms_field_932_label,
+#ninja_forms_field_919_label,
 #ninja_forms_field_934_label,
 #ninja_forms_field_935_label,
 #ninja_forms_field_936_label,
@@ -3355,7 +3362,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1337_error,
 #ninja_forms_field_1338_error,
 #ninja_forms_field_1339_error,
-#ninja_forms_field_1341_error
+#ninja_forms_field_1341_error,
+#ninja_forms_field_1345_error
 {
     font-size: 18px;
     font-family: lato;
