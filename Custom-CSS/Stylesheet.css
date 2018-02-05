@@ -9,6 +9,7 @@
 #ninja_forms_form_214_all_fields_wrap .field-wrap,
 #ninja_forms_form_219_all_fields_wrap .field-wrap,
 #ninja_forms_form_234_all_fields_wrap .field-wrap,
+#ninja_forms_form_469_all_fields_wrap .field-wrap,
 #ninja_forms_form_449_all_fields_wrap .field-wrap,
 #ninja_forms_form_246_all_fields_wrap .field-wrap,
 #ninja_forms_form_257_all_fields_wrap .field-wrap,
@@ -62,6 +63,8 @@
 #ninja_forms_form_234_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_449_all_fields_wrap .field-wrap .input-counter,
 #ninja_forms_form_449_all_fields_wrap .ninja-forms-required-items,
+#ninja_forms_form_463_all_fields_wrap .field-wrap .input-counter,
+#ninja_forms_form_463_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_246_all_fields_wrap .field-wrap .input-counter,
 #ninja_forms_form_246_all_fields_wrap .ninja-forms-required-items,
 #ninja_forms_form_257_all_fields_wrap .field-wrap .input-counter,
@@ -214,6 +217,10 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 #ninja_forms_field_449:hover {
+    cursor: pointer
+}
+
+#ninja_forms_field_463:hover {
     cursor: pointer
 }
 
@@ -685,6 +692,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_919,
 #ninja_forms_field_920,
 #ninja_forms_field_921,
+#ninja_forms_field_934,
+#ninja_forms_field_935,
+#ninja_forms_field_936,
+#ninja_forms_field_937,
 #ninja_forms_field_925,
 #ninja_forms_field_926,
 #ninja_forms_field_927,
@@ -713,23 +724,21 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1196,
 #ninja_forms_field_1290,
 #ninja_forms_field_1291,
-#ninja_forms_field_1294,
+#ninja_forms_field_1354,
 #ninja_forms_field_1342,
 #ninja_forms_field_1343,
 #ninja_forms_field_1344,
 #ninja_forms_field_1351,
 #ninja_forms_field_1352,
-#ninja_forms_field_1353
+#ninja_forms_field_1353,
+#ninja_forms_field_1294
 {
    display: none; 
 }
 
 /*Download Detailed Curriculum 25 Forms CSS */
 
-#ninja_forms_field_934,
-#ninja_forms_field_935,
-#ninja_forms_field_936,
-#ninja_forms_field_937,
+
 #ninja_forms_field_959,
 #ninja_forms_field_960,
 #ninja_forms_field_961,
@@ -911,6 +920,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_919,
 #ninja_forms_field_921_div_wrap,
 #ninja_forms_field_920,
+#ninja_forms_field_934,
+#ninja_forms_field_935,
+#ninja_forms_field_937_div_wrap,
+#ninja_forms_field_936,
 #ninja_forms_field_925,
 #ninja_forms_field_926,
 #ninja_forms_field_967_div_wrap,
@@ -937,10 +950,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_930,
 #ninja_forms_field_931,
 #ninja_forms_field_932_div_wrap,                                /*Remarketing landing page end */
-#ninja_forms_field_934,  
-#ninja_forms_field_935,
-#ninja_forms_field_936,
-#ninja_forms_field_937_div_wrap,
 #ninja_forms_field_959,
 #ninja_forms_field_960,
 #ninja_forms_field_961,
@@ -1066,7 +1075,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1348,
 #ninja_forms_field_1349_div_wrap
 {
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 
@@ -1077,7 +1086,8 @@ body.et-pb-preview #main-content .container tr td {
     color: #666
 }
 
-#ninja_forms_form_449_wrap .ninja-forms-form-title {
+#ninja_forms_form_449_wrap .ninja-forms-form-title,
+#ninja_forms_form_463_wrap .ninja-forms-form-title {
     margin-right: 100%;
     color: #666
 }
@@ -1172,13 +1182,15 @@ body.et-pb-preview #main-content .container tr td {
     color: #fff
 }
 
-#ninja_forms_form_449_response_msg {
+#ninja_forms_form_449_response_msg,
+#ninja_forms_form_463_response_msg {
     color: #fff
 }
 
 #ninja_forms_form_234 #ninja_forms_form_234_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_445 #ninja_forms_form_445_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_449 #ninja_forms_form_449_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_463 #ninja_forms_form_463_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_454 #ninja_forms_form_454_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_475 #ninja_forms_form_475_all_fields_wrap .field-wrap .ninja-forms-field {
     border-radius: 5px;
@@ -1193,7 +1205,6 @@ body.et-pb-preview #main-content .container tr td {
 /*-- Start --*/
 #ninja_forms_form_229 #ninja_forms_form_229_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_369 #ninja_forms_form_369_all_fields_wrap .field-wrap .ninja-forms-field,
-#ninja_forms_form_463 #ninja_forms_form_463_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_458 #ninja_forms_form_458_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_479 #ninja_forms_form_479_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_509 #ninja_forms_form_509_all_fields_wrap .field-wrap .ninja-forms-field,
@@ -1251,6 +1262,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_918_div_wrap,
 #ninja_forms_field_919_div_wrap,
 #ninja_forms_field_920_div_wrap,
+#ninja_forms_field_934_div_wrap,
+#ninja_forms_field_935_div_wrap,
+#ninja_forms_field_936_div_wrap,
 #ninja_forms_field_925_div_wrap,
 #ninja_forms_field_926_div_wrap,
 #ninja_forms_field_927_div_wrap,
@@ -1283,9 +1297,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_929_div_wrap,  /*Remarketing landing start */
 #ninja_forms_field_930_div_wrap,
 #ninja_forms_field_931_div_wrap,  /*Remarketing landing End */
-#ninja_forms_field_934_div_wrap,
-#ninja_forms_field_935_div_wrap,
-#ninja_forms_field_936_div_wrap,
 #ninja_forms_field_959_div_wrap,
 #ninja_forms_field_960_div_wrap,
 #ninja_forms_field_961_div_wrap,
@@ -1388,6 +1399,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_555_div_wrap, 
 #ninja_forms_field_916_div_wrap,
 #ninja_forms_field_921_div_wrap,
+#ninja_forms_field_937_div_wrap,
 #ninja_forms_field_967_div_wrap,
 #ninja_forms_field_1176_div_wrap
 {
@@ -1404,7 +1416,6 @@ body.et-pb-preview #main-content .container tr td {
             /*Start*/
 #ninja_forms_field_825_div_wrap,
 #ninja_forms_field_932_div_wrap,
-#ninja_forms_field_937_div_wrap,
 #ninja_forms_field_992_div_wrap,
 #ninja_forms_field_997_div_wrap,
 #ninja_forms_field_1002_div_wrap,
@@ -1723,6 +1734,11 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_925_div_wrap,
     #ninja_forms_field_926_div_wrap,
     #ninja_forms_field_927_div_wrap,
+    #ninja_forms_field_934_div_wrap,
+    #ninja_forms_field_935_div_wrap,
+    #ninja_forms_field_936_div_wrap,
+    #ninja_forms_field_937_div_wrap,
+    #ninja_forms_field_938_div_wrap,
     #ninja_forms_field_967_div_wrap,
     #ninja_forms_field_928_div_wrap,
     #ninja_forms_field_954_div_wrap,
@@ -1757,11 +1773,6 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_931_div_wrap,
     #ninja_forms_field_932_div_wrap,
     #ninja_forms_field_933_div_wrap, /*End remarketing */
-    #ninja_forms_field_934_div_wrap, 
-    #ninja_forms_field_935_div_wrap,
-    #ninja_forms_field_936_div_wrap,
-    #ninja_forms_field_937_div_wrap,
-    #ninja_forms_field_938_div_wrap,
     #ninja_forms_field_959_div_wrap,
     #ninja_forms_field_960_div_wrap,
     #ninja_forms_field_961_div_wrap,
@@ -2453,7 +2464,7 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 .ninja-forms-req-symbol strong {
-    color: #fff
+    color: #fff;
 }
 
 .ninja-forms-all-fields-wrap {
@@ -2916,7 +2927,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1336,
 #ninja_forms_field_1337,
 #ninja_forms_field_1339,
-#ninja_forms_field_1345
+#ninja_forms_field_1345,
+#ninja_forms_field_1355,
+#ninja_forms_field_1356,
+#ninja_forms_field_1357
 {
     font-size: 16px;
     font-family: lato;
@@ -3085,7 +3099,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1338_label,
 #ninja_forms_field_1339_label,
 #ninja_forms_field_1341_label,
-#ninja_forms_field_1345_label
+#ninja_forms_field_1345_label,
+#ninja_forms_field_1355_label,
+#ninja_forms_field_1356_label,
+#ninja_forms_field_1357_label
 {
     font-size: 18px;
     font-family: lato;
@@ -3103,15 +3120,15 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_919_label,
 #ninja_forms_field_920_label,
 #ninja_forms_field_921_label,
+#ninja_forms_field_934_label,
+#ninja_forms_field_935_label,
+#ninja_forms_field_936_label,
+#ninja_forms_field_937_label,
 #ninja_forms_field_929_label,
 #ninja_forms_field_930_label,
 #ninja_forms_field_931_label,
 #ninja_forms_field_932_label,
 #ninja_forms_field_919_label,
-#ninja_forms_field_934_label,
-#ninja_forms_field_935_label,
-#ninja_forms_field_936_label,
-#ninja_forms_field_937_label,
 #ninja_forms_field_939_label,
 #ninja_forms_field_940_label,
 #ninja_forms_field_941_label,
@@ -3139,7 +3156,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1310_breadcrumb,
 #ninja_forms_field_1321_breadcrumb,
 #ninja_forms_field_1331_breadcrumb,
-#ninja_forms_field_1339_breadcrumb {
+#ninja_forms_field_1339_breadcrumb 
+{
     font-size: 16px;
     font-family: Lato;
     color: #fff;
