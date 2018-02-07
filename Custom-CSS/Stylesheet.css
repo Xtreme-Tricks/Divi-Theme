@@ -2131,6 +2131,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1213:hover,
 #ninja_forms_field_1228:hover,
 #ninja_forms_field_1340:hover,
+#ninja_forms_field_1371:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover,
 #ninja_forms_field_1295_breadcrumb:hover,
@@ -2153,6 +2154,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1213_div_wrap,
 #ninja_forms_field_1228_div_wrap,
 #ninja_forms_field_1340_div_wrap,
+#ninja_forms_field_1371_div_wrap,
 #ninja_forms_form_740_mp_next_div_wrap,
 #ninja_forms_form_740_mp_prev_div_wrap
 {
@@ -2222,6 +2224,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1213,
 #ninja_forms_field_1228,
 #ninja_forms_field_1340,
+#ninja_forms_field_1371,
 #ninja_forms_form_740_mp_next,
 #ninja_forms_form_740_mp_prev
 {
@@ -2602,7 +2605,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1168,
 #ninja_forms_field_1213,
 #ninja_forms_field_1228,
-#ninja_forms_field_1340
+#ninja_forms_field_1340,
+#ninja_forms_field_1371
  {
     font-size: 16px;
     width: 50%;
@@ -2717,6 +2721,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1213:hover,
 #ninja_forms_field_1228:hover,
 #ninja_forms_field_1340:hover,
+#ninja_forms_field_1371:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover
 {    
@@ -2930,7 +2935,21 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1345,
 #ninja_forms_field_1355,
 #ninja_forms_field_1356,
-#ninja_forms_field_1357
+#ninja_forms_field_1357,
+#ninja_forms_field_1358,
+#ninja_forms_field_1359,
+#ninja_forms_field_1360,
+#ninja_forms_field_1361,
+#ninja_forms_field_1362,
+#ninja_forms_field_1363,
+#ninja_forms_field_1364,
+#ninja_forms_field_1365,
+#ninja_forms_field_1366,
+#ninja_forms_field_1367,
+#ninja_forms_field_1368,
+#ninja_forms_field_1369,
+#ninja_forms_field_1370,
+#ninja_forms_field_1374
 {
     font-size: 16px;
     font-family: lato;
@@ -3102,7 +3121,21 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1345_label,
 #ninja_forms_field_1355_label,
 #ninja_forms_field_1356_label,
-#ninja_forms_field_1357_label
+#ninja_forms_field_1357_label,
+#ninja_forms_field_1358_label,
+#ninja_forms_field_1359_label,
+#ninja_forms_field_1360_label,
+#ninja_forms_field_1361_label,
+#ninja_forms_field_1362_label,
+#ninja_forms_field_1363_label,
+#ninja_forms_field_1364_label,
+#ninja_forms_field_1365_label,
+#ninja_forms_field_1366_label,
+#ninja_forms_field_1367_label,
+#ninja_forms_field_1368_label,
+#ninja_forms_field_1369_label,
+#ninja_forms_field_1370_label,
+#ninja_forms_field_1374_label
 {
     font-size: 18px;
     font-family: lato;
@@ -3201,11 +3234,10 @@ body.et-pb-preview #main-content .container tr td {
 .ninja-forms-mp-page-title,
 .ninja-forms-field-description
 {
-    font-size: 18px;
+    font-size: 15px;
     font-family: lato;
-    font-weight: bold;
     color: #222;
-    text-align: center;
+    margin-left: 10%;
 }
 
 #ninja_forms_field_1304_label,
@@ -3412,7 +3444,21 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1338_error,
 #ninja_forms_field_1339_error,
 #ninja_forms_field_1341_error,
-#ninja_forms_field_1345_error
+#ninja_forms_field_1345_error,
+#ninja_forms_field_1358_error,
+#ninja_forms_field_1359_error,
+#ninja_forms_field_1360_error,
+#ninja_forms_field_1361_error,
+#ninja_forms_field_1362_error,
+#ninja_forms_field_1363_error,
+#ninja_forms_field_1364_error,
+#ninja_forms_field_1365_error,
+#ninja_forms_field_1366_error,
+#ninja_forms_field_1367_error,
+#ninja_forms_field_1368_error,
+#ninja_forms_field_1369_error,
+#ninja_forms_field_1370_error,
+#ninja_forms_field_1374_error
 {
     font-size: 18px;
     font-family: lato;
@@ -3428,7 +3474,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_7_response_msg,
 #ninja_forms_form_674_response_msg,
 #ninja_forms_form_688_response_msg,
-#ninja_forms_form_740_response_msg
+#ninja_forms_form_740_response_msg,
+#ninja_forms_form_748_response_msg
 {
     font-size: 18px;
     text-align: center;
