@@ -1237,7 +1237,7 @@ body.et-pb-preview #main-content .container tr td {
     line-height: 18px;
     margin-right: 2.5px;
     font-size: 16px;
-    font-family: Raleway
+    font-family: lato
 }
 
 /* --- Download Detailed Curriculum Code for all Feilds --- */
@@ -1292,7 +1292,7 @@ body.et-pb-preview #main-content .container tr td {
     line-height: 18px;
     margin-right: 4.5px;
     font-size: 16px;
-    font-family: Raleway
+    font-family: lato
 }
 /*-- End --*/
 
@@ -2216,6 +2216,13 @@ body.et-pb-preview #main-content .container tr td {
     text-align: center
 }
 
+#submit_wpum_register:hover,
+#wpum_loginformwp-submit:hover
+ {
+    cursor: pointer;
+    text-align: center
+}
+
 #ninja_forms_field_68_div_wrap,
 #ninja_forms_field_121_div_wrap,
 #ninja_forms_field_361_div_wrap,
@@ -2229,6 +2236,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1340_div_wrap,
 #ninja_forms_field_1371_div_wrap,
 #ninja_forms_field_1399_div_wrap,
+#submit_wpum_register_div_wrap,
+#wpum_loginformwp-submit
 #ninja_forms_form_740_mp_next_div_wrap,
 #ninja_forms_form_740_mp_prev_div_wrap
 {
@@ -2302,7 +2311,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1371,
 #ninja_forms_field_1399,
 #ninja_forms_form_740_mp_next,
-#ninja_forms_form_740_mp_prev
+#ninja_forms_form_740_mp_prev,
+#submit_wpum_register,
+#wpum_loginformwp-submit
 {
     font-family: lato
 }
@@ -2684,7 +2695,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1228,
 #ninja_forms_field_1340,
 #ninja_forms_field_1371,
-#ninja_forms_field_1399
+#ninja_forms_field_1399,
+#wpum_loginformwp-submit,
+#submit_wpum_register
  {
     font-size: 16px;
     width: 50%;
@@ -2802,6 +2815,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1340:hover,
 #ninja_forms_field_1371:hover,
 #ninja_forms_field_1399:hover,
+#submit_wpum_register:hover,
+#wpum_loginformwp-submit:hover
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover
 {    
@@ -3061,6 +3076,43 @@ body.et-pb-preview #main-content .container tr td {
     text-align: left;
     width: 80%;
     margin-left: 10%;
+}
+
+
+.wpum-registration-form fieldset input.input-text,
+.wpum-registration-form fieldset input.input-email,
+#wpum_loginformuser_login,
+#wpum_loginformuser_pass
+{
+    font-size: 16px;
+    font-family: lato;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 67%;
+    margin-left: -42%
+}
+
+@media screen and (max-width:910px)  {
+.wpum-registration-form fieldset input.input-text,
+.wpum-registration-form fieldset input.input-email
+{
+    font-size: 16px;
+    font-family: lato;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 67%;
+    margin-left: 0%
+}
 }
 
 #ninja_forms_field_1304,
@@ -3879,24 +3931,6 @@ input[placeholder='Phone No'] {
     }
 }
 
-#wpum_loginformwp-submit {
-    width: 125px;
-    height: 40px;
-    padding: 10px;
-    color: #29aae2;
-    background: rgba(255, 255, 255, .25);
-    border: 1px solid #29aae2;
-    font-size: 16px;
-    border-radius: 3px
-}
-
-#wpum_loginformwp-submit:hover {
-    transition-duration: .25s;
-    color: rgba(255, 255, 255, .9);
-    background: rgba(0, 0, 0, .25);
-    border: none
-}
-
 #ninja_forms_field_713 {
     margin-left: 10%
 }
@@ -4350,7 +4384,7 @@ input[placeholder='Phone No'] {
     border-radius: 5px;
     text-align: left;
     border: 1px solid rgba(249, 249, 249, 0.26);
-    font-family: Raleway;
+    font-family: lato;
     font-size: 16px;
 }
 
@@ -4362,7 +4396,7 @@ input[placeholder='Phone No'] {
     border-radius: 5px;
     text-align: left;
     border: 1px solid rgba(249, 249, 249, 0.26);
-    font-family: Raleway;
+    font-family: lato;
     font-size: 16px;
 }
 
@@ -4430,20 +4464,6 @@ input[placeholder='Phone No'] {
     font-size: 20px;
     cursor: pointer;
 }
-
-
-#wpum_loginformuser_login, #wpum_loginformuser_pass {
-    height: 40px;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid #bbb;
-    font-family: lato;
-    font-size: 16px;
-    width: 44%;
-    float: left;
-    }
-
 
 #ninja_forms_field_79, #ninja_forms_field_80, #ninja_forms_field_81, #ninja_forms_field_82 {
     font-size: 16px;
