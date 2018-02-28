@@ -886,7 +886,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1411,
 #ninja_forms_field_1412,
 #ninja_forms_field_1413,
-#ninja_forms_field_1414
+#ninja_forms_field_1414,
+#ninja_forms_field_1417,
+#ninja_forms_field_1419,
+#ninja_forms_field_1420,
+#ninja_forms_field_1421
 
  {
     height: 40px;
@@ -1110,7 +1114,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1411,
 #ninja_forms_field_1412,
 #ninja_forms_field_1413,
-#ninja_forms_field_1414_div_wrap
+#ninja_forms_field_1414_div_wrap,
+#ninja_forms_field_1417,
+#ninja_forms_field_1419,
+#ninja_forms_field_1420_div_wrap,
+#ninja_forms_field_1421
 {
     margin-right: 20px;
 }
@@ -1205,7 +1213,8 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_740,
 #nf_submit_750,
 #nf_submit_767,
-#nf_submit_771
+#nf_submit_771,
+#nf_submit_775
  {
     text-align: center;
     margin-top: 3%
@@ -1286,7 +1295,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_746 #ninja_forms_form_746_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_750 #ninja_forms_form_750_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_767 #ninja_forms_form_767_all_fields_wrap .field-wrap .ninja-forms-field,
-#ninja_forms_form_771 #ninja_forms_form_771_all_fields_wrap .field-wrap .ninja-forms-field
+#ninja_forms_form_771 #ninja_forms_form_771_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_775 #ninja_forms_form_775_all_fields_wrap .field-wrap .ninja-forms-field
 {
     border-radius: 5px;
     line-height: 18px;
@@ -1441,7 +1451,13 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1407_div_wrap,
 #ninja_forms_field_1411_div_wrap,
 #ninja_forms_field_1412_div_wrap,
-#ninja_forms_field_1413_div_wrap
+#ninja_forms_field_1413_div_wrap,
+#ninja_forms_field_1417_div_wrap,
+#ninja_forms_field_1419_div_wrap,
+#ninja_forms_field_1421_div_wrap,
+#ninja_forms_field_1417_div_wrap,
+#ninja_forms_field_1419_div_wrap,
+#ninja_forms_field_1421_div_wrap
 {
     margin-right: 20px;
     width: 22%;
@@ -1501,7 +1517,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1349_div_wrap,
 #ninja_forms_field_1388_div_wrap,
 #ninja_forms_field_1408_div_wrap,
-#ninja_forms_field_1414_div_wrap
+#ninja_forms_field_1414_div_wrap,
+#ninja_forms_field_1420_div_wrap
 {
     width: 22%;
     display: inline-block
@@ -1995,7 +2012,11 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_1412_div_wrap,
     #ninja_forms_field_1413_div_wrap,
     #ninja_forms_field_1414_div_wrap,
-    #ninja_forms_field_1416_div_wrap
+    #ninja_forms_field_1416_div_wrap,
+    #ninja_forms_field_1417_div_wrap,
+    #ninja_forms_field_1419_div_wrap,
+    #ninja_forms_field_1420_div_wrap,
+    #ninja_forms_field_1421_div_wrap
     {
         width: 100%;
         margin-top: 10px;
@@ -3345,10 +3366,17 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_959_label,
 #ninja_forms_field_960_label,
 #ninja_forms_field_961_label,
+#ninja_forms_field_980_label,
+#ninja_forms_field_981_label,
+#ninja_forms_field_982_label,
 #ninja_forms_field_1064_label,
 #ninja_forms_field_1065_label,
 #ninja_forms_field_1066_label,
 #ninja_forms_field_1067_label,
+#ninja_forms_field_1084_label,
+#ninja_forms_field_1085_label,
+#ninja_forms_field_1086_label,
+#ninja_forms_field_1087_label,
 #ninja_forms_field_1089_label,
 #ninja_forms_field_1090_label,
 #ninja_forms_field_1091_label,
@@ -3357,6 +3385,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1100_label,
 #ninja_forms_field_1101_label,
 #ninja_forms_field_1102_label,
+#ninja_forms_field_1104_label,
+#ninja_forms_field_1105_label,
+#ninja_forms_field_1106_label,
+#ninja_forms_field_1107_label,
 #ninja_forms_field_1151_label,
 #ninja_forms_field_1174_label,
 #ninja_forms_field_1176_label,
@@ -3377,7 +3409,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1411_label,
 #ninja_forms_field_1412_label,
 #ninja_forms_field_1413_label,
-#ninja_forms_field_1414_label
+#ninja_forms_field_1414_label,
+#ninja_forms_field_1417_label,
+#ninja_forms_field_1419_label,
+#ninja_forms_field_1420_label,
+#ninja_forms_field_1421_label
 {
     font-size: 18px;
     font-family: lato;
