@@ -1,0 +1,89 @@
+<script id='formservjs' src='https://iide.freshsales.io/web_forms/1b567374440fcf626fd8db22c8ddee14d8800171dd86b527f615ac327e7f151e/form.js' crossorigin='anonymous'></script>
+<style>
+
+.fserv-form {
+ display: flex;
+}
+
+.fserv-container {
+ max-width: 1000%;
+}
+
+.fserv-form > .fserv-field + .fserv-field,
+.fserv-form .fserv-field+div:not(.fserv-field) {
+ margin-top: 5px;
+ margin-bottom: 15px;
+}
+
+.fserv-container .fserv-label
+{
+ font-size: 16px!important;
+ font-family: lato;
+ text-align: center;
+}
+
+.fserv-form-description
+{
+ display: none;
+}
+
+.fserv-container .fserv-input-text
+{
+ font-size: 16px;
+ font-family: lato;
+ color: #222;
+ height: 40px;
+ line-height: 20px;
+ border-radius: 5px;
+ border: 1px solid #46b8e7;
+ background: #fff;
+ width: 60%
+}
+
+.fserv-container .fserv-input-text
+{
+ height: 40px;
+ color: #000;
+ width: 100%;
+ background-color: rgba(255, 255, 255, .5);
+ border: #fff;
+ text-align: center
+}
+
+.fserv-container .fserv-select, #select2-leadcustom_fieldcf_interest-iu-container
+{
+ height: 40px;
+ color: #000;
+ width: 100%;
+ background-color: rgba(255, 255, 255, .5);
+ border: #fff;
+ text-align: center
+}
+
+.fserv-container .fserv-select, #select2-leadcustom_fieldcf_interest-iu-container
+{
+ font-size: 16px;
+ font-family: lato;
+ color: #222;
+ height: 40px;
+ line-height: 20px;
+ border-radius: 5px;
+ border: 1px solid #46b8e7;
+ background: #fff;
+ width: 140%!important
+}
+
+.fserv-select_div_wrap, .fserv-container .fserv-input-text
+{
+ margin-right: 20px;
+ width: 80%;
+}
+
+.fserv-container_div_wrap, .fserv-input-text_div_wrap
+{
+ margin-right: 20px;
+ width: 22%;
+ display: inline;
+}
+
+</style>
