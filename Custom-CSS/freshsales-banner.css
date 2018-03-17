@@ -1,8 +1,13 @@
 <script id='formservjs' src='https://iide.freshsales.io/web_forms/1b567374440fcf626fd8db22c8ddee14d8800171dd86b527f615ac327e7f151e/form.js' crossorigin='anonymous'></script>
 <style>
+
 .fserv-form-description {
-display: none;
+    font-family: lato;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: -5%;
 }
+
 .fserv-field+div:not(.fserv-field) {
     border-top: 0px solid #e5e5e5;
     margin-top: 25px;
@@ -57,6 +62,7 @@ display: none;
     padding: 20px 0;
     position: relative;
 }
+
 input.text, input.title, input[type=email], input[type=password], input[type=tel], input[type=text], select, textarea {
     padding: 2px;
     border: 1px solid #bbb;
