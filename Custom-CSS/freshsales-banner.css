@@ -3,7 +3,7 @@
 
 .fserv-form-description {
     font-family: lato;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: -5%;
 }
@@ -18,7 +18,7 @@
 .fserv-container button[type=submit].fserv-button-submit {
     width: 92%;
     background: #29aae1;
-    font-family: Roboto;
+    font-family: lato;
     font-size: 16px!important;
     color: #f1f1f1;
     border-radius: 5px;
