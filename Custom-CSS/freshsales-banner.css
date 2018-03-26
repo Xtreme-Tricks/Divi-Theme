@@ -2,80 +2,80 @@
 <style>
 
 .fserv-form-description {
-    font-family: lato;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: -5%;
+ font-family: lato;
+ font-size: 14px;
+ text-align: center;
+ margin-bottom: -5%;
 }
 
 .fserv-field+div:not(.fserv-field) {
-    border-top: 0px solid #e5e5e5;
-    margin-top: 25px;
-    padding: 25px 30px 10px;
-    text-align: center;
+ border-top: 0px solid #e5e5e5;
+ margin-top: 25px;
+ padding: 25px 30px 10px;
+ text-align: center;
 }
 
 .fserv-container button[type=submit].fserv-button-submit {
-    width: 92%;
-    background: #29aae1;
-    font-family: lato;
-    font-size: 16px!important;
-    color: #f1f1f1;
-    border-radius: 5px;
-    border: none;
-    margin-left: 4%;
+ width: 92%;
+ background: #29aae1;
+ font-family: lato;
+ font-size: 16px!important;
+ color: #f1f1f1;
+ border-radius: 5px;
+ border: none;
+ margin-left: 4%;
 }
 
 .fserv-container .fserv-input-text {
-    height: 40px;
-    color: #f9f9f9!important;
-    background: rgba(255,255,255,0.12);
-    border-radius: 5px;
-    text-align: left;
-    border: 1px solid rgba(249,249,249,0.26);
-    font-family: lato;
-    font-size: 16px!important;
+ height: 40px;
+ color: #f9f9f9!important;
+ background: rgba(255,255,255,0.12);
+ border-radius: 5px;
+ text-align: left;
+ border: 1px solid rgba(249,249,249,0.26);
+ font-family: lato;
+ font-size: 16px!important;
 }
 .fserv-container .fserv-label, .fserv-container button {
-    font-size: 16px!important;
-    font-family: lato;
+ font-size: 16px!important;
+ font-family: lato;
 }
 .fserv-container .fserv-form-name {
-    font-family: roboto;
-    font-size: 18px;
+ font-family: roboto;
+ font-size: 18px;
 }
 
 .fserv-container div {
-    margin-top: 0px;
-    margin-bottom: -15px!important;
+ margin-top: 0px;
+ margin-bottom: -15px!important;
 }
 
 .fserv-container {
-    background-color: var(--form-bg-color);
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0px!important;
-    background: rgba(0,0,0,0.5)!important;
-    font-family: Arial;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px 0;
-    position: relative;
+ background-color: var(--form-bg-color);
+ border: 0;
+ border-radius: 10px;
+ box-shadow: 0 0px 0px 0px rgba(156,156,156,.07)!important;
+ background: rgba(0,0,0,0.5)!important;
+ font-family: Arial;
+ max-width: 500px;
+ margin: 0 auto;
+ padding: 20px 0;
+ position: relative;
 }
 
 input.text, input.title, input[type=email], input[type=password], input[type=tel], input[type=text], select, textarea {
-    padding: 2px;
-    border: 1px solid #bbb;
-    color: white!important;
-    background: rgba(255,255,255,0.12)!important;
+ padding: 2px;
+ border: 1px solid #bbb;
+ color: white!important;
+ background: rgba(255,255,255,0.12)!important;
 }
 
 .fserv-container .fserv-input-text {
-   color: #fff!important;
+ color: #fff!important;
 }
 
 .fserv-container .fserv-input-text:focus {
-    color: #fff!important;
+ color: #fff!important;
 }
 
 </style>
