@@ -8,6 +8,10 @@
  margin-bottom: -5%;
 }
 
+.fserv-container .fserv-label {
+    display: none;
+}
+
 .fserv-field+div:not(.fserv-field) {
  border-top: 0px solid #e5e5e5;
  margin-top: 25px;
@@ -26,6 +30,38 @@
  margin-left: 4%;
 }
 
+.fserv-field .select2-container .select2-selection--single {
+    cursor: pointer;
+    background: rgba(255,255,255,0.12) !important;
+}
+
+.fserv-field .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white;
+    line-height: 28px;
+    font-family: lato;
+    font-size: 16px;
+}
+
+fserv-field .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: gray;
+}
+
+.fserv-field .select2-results {
+    display: block;
+    font-family: lato;
+    font-size: 16px;
+}
+
+.fserv-field .select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #aaa;
+    font-family: lato;
+    font-size: 16px;
+}
+
+.fserv-field .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #22222;
+}
+
 .fserv-container .fserv-input-text {
  height: 40px;
  color: #f9f9f9!important;
@@ -35,6 +71,7 @@
  border: 1px solid rgba(249,249,249,0.26);
  font-family: lato;
  font-size: 16px!important;
+ margin-bottom: 35px;
 }
 .fserv-container .fserv-label, .fserv-container button {
  font-size: 16px!important;
