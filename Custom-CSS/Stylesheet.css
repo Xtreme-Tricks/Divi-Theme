@@ -113,6 +113,20 @@ body.et-pb-preview #main-content .container tr td {
     }
 }
 
+@media screen and (max-width:910px) {
+    #ninja_forms_field_971 {
+        width: 92%!important;
+        background: rgba(0,0,0,0)!important;
+        padding: 12px 0!important;
+        font-family: Roboto!important;
+        font-size: 20px!important;
+        color: #fff!important;
+        border-radius: 5px!important;
+        border: 2px solid #fff!important;
+        margin-left: 4%!important;
+    }
+}
+
 #ninja_forms_field_487,
 #ninja_forms_field_488,
 #ninja_forms_field_489 
