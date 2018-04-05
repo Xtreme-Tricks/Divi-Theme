@@ -115,4 +115,15 @@ input.text, input.title, input[type=email], input[type=password], input[type=tel
  color: #fff!important;
 }
 
+.powered-by a {
+    color: #fff;
+    text-decoration: none;
+    display: none;
+}
+
+.powered-by a strong {
+    color: #fff;
+    display: none;
+}
+
 </style>
