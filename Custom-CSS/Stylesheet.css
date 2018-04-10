@@ -17,6 +17,35 @@
     margin-bottom: 2px
 }
 
+/* Test Questions */
+.qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
+    color: #fff !important;
+    background: #3498db !important;
+    margin-right: 45%!important;
+}
+
+.quiz_section.quiz_end .qsm-submit-btn {
+    display: block;
+    margin: 10px 0;
+        margin-right: 0px;
+        margin-left: 0px;
+    margin-left: 45%!important;
+}
+
+@media screen and (max-width:910px) {
+	.quiz_section.quiz_end .qsm-submit-btn {
+		margin-left: 35%!important;
+	}
+}
+
+@media screen and (max-width:910px) {
+	.qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
+	margin-left: 25%!important;
+	margin-right: 20% !important;
+	}
+}
+/* Test Questions End */
+
 .archive a.button.addtocartbutton:hover {
     padding: .3em 2em .3em 1em!important
 }
@@ -2681,7 +2710,7 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 .ninja-forms-req-symbol strong {
-    color: #fff;
+    color: #ff0000;
 }
 
 .ninja-forms-all-fields-wrap {
