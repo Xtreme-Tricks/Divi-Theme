@@ -33,16 +33,16 @@
 }
 
 @media screen and (max-width:910px) {
-	.quiz_section.quiz_end .qsm-submit-btn {
-		margin-left: 35%!important;
-	}
+    .quiz_section.quiz_end .qsm-submit-btn {
+        margin-left: 35%!important;
+    }
 }
 
 @media screen and (max-width:910px) {
-	.qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
-	margin-left: 25%!important;
-	margin-right: 20% !important;
-	}
+    .qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
+    margin-left: 25%!important;
+    margin-right: 20% !important;
+    }
 }
 /* Test Questions End */
 
@@ -654,8 +654,8 @@ body.et-pb-preview #main-content .container tr td {
 .ninja-forms-form-740-mp-page div,
 .ninja-forms-form-806-mp-page div {
     font-size: 16px;
-    font-family: lato
-    margin-left: 10%;
+    font-family: lato;
+    margin-left: 10%
 }
 
 #ninja_forms_form_6_mp_nav_wrap,
@@ -695,14 +695,13 @@ body.et-pb-preview #main-content .container tr td {
 
 #ninja_forms_field_840_div_wrap,
 #ninja_forms_field_911_div_wrap
- {
+{
     margin-right: 4.5%;
     width: 30%;
     display: inline-block
 }
 
-#ninja_forms_field_532_div_wrap,
- {
+#ninja_forms_field_532_div_wrap {
     width: 30%;
     display: inline-block
 }
@@ -2304,7 +2303,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 #ninja_forms_field_85:hover,
-,
 #ninja_forms_field_85 {
     background-color: #58aee1;
     color: #fff
@@ -2814,10 +2812,6 @@ body.et-pb-preview #main-content .container tr td {
     color: #f9f9f9;
     border: 2px solid;
     transition-duration: .6s
-}
-
-{
-    color: #fff
 }
 
 #ninja_forms_field_128_breadcrumb,
@@ -4543,15 +4537,10 @@ input[placeholder='Phone No'] {
 }
 
 
-@media only screen and (max-width:910px) {
+@media only screen and (max-width:910px) 
+{
     #ninja_forms_field_1304_div_wrap,
     #ninja_forms_field_1483_div_wrap,
-     {
-        width: 100%;
-        display: inline-block;
-        margin-top: 5px
-    }
-
     #ninja_forms_field_1484_div_wrap,
     #ninja_forms_field_1485_div_wrap 
     {
@@ -5018,7 +5007,7 @@ body {
 
 
 #ninja_forms_field_840,
-#ninja_forms_field_911 { {
+#ninja_forms_field_911 {
     height: 40px;
     box-sizing: border-box;
     font-family: Raleway;
@@ -5039,13 +5028,12 @@ body {
 #ninja_forms_field_908_div_wrap,
 #ninja_forms_field_909_div_wrap,
 #ninja_forms_field_910_div_wrap,
-#ninja_forms_field_911_div_wrap,
-
-{
-margin-left: 1%;
-width:99%;
-display:block
- }
+#ninja_forms_field_911_div_wrap
+    {
+        margin-left: 1%;
+        width:99%;
+        display:block
+    }
 }
 
 #ninja_forms_field_92_label, 
