@@ -5061,3 +5061,114 @@ margin-left: 10%
     font-size: 16px;
     margin-left: 0%;
 }
+
+/* Login and Registration Form */
+
+.wpum-login-form form label {
+    display: block;
+    margin: 0;
+    width: 55%;
+    float: none;
+    font-family: lato;
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 10%
+}
+
+@media screen and (max-width:910px) {
+    .wpum-login-form form label {
+        display: block;
+        margin: 0;
+        width: 55%;
+        float: none;
+        font-family: lato;
+        font-size: 14px;
+        vertical-align: middle;
+        margin-left: 10%
+    }
+}
+
+#wpum_loginformuser_login,
+#wpum_loginformuser_pass 
+{
+    width: 75%;
+    font-size: 14px;
+    color: #183247;
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #d3dbda;
+    padding: 5px 0;
+    line-height: 18px;
+    background: 0 0;
+    margin-left: 10%
+}
+
+#wpum_loginformuser_login:focus,
+#wpum_loginformuser_pass:focus 
+{
+    outline: 0;
+    border-bottom: solid 1px #4990e2;
+}
+
+.wpum-login-form form p.login-password, .wpum-login-form form p.login-remember, .wpum-login-form form p.login-username {
+    margin: 0 0 1em;
+    padding: 0 0 1em;
+    line-height: 2em;
+    border: 0;
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom: 0px solid #eee;
+    zoom: 1;
+}
+
+#wpum_loginformwp-submit {
+    border-radius: 3px;
+    background: #3570e9;
+    border: 0;
+    box-shadow: 0 1px 0 0 #c9d1d0;
+    color: #fff;
+    font-size: 18px;
+    font-family: Lato;
+    padding: 11px 0;
+    cursor: pointer;
+    line-height: 18px;
+    width: 75%;
+    height: 10%;
+    font-weight: 600;
+    margin-left: 10%
+}
+
+@media screen and (max-width:910px) {
+    #wpum_loginformwp-submit {
+        border-radius: 3px;
+        background: #3570e9;
+        border: 0;
+        box-shadow: 0 1px 0 0 #c9d1d0;
+        color: #fff;
+        font-size: 18px;
+        font-family: Lato;
+        padding: 11px 0;
+        cursor: pointer;
+        line-height: 18px;
+        width: 45%;
+        height: 10%;
+        font-weight: 600;
+        margin-left: 30%
+    }
+}
+
+#wpum_loginformwp-submit {
+    background-color: #2A5FCD;
+}
+
+.oneall_social_login_label {
+    display: none;
+}
+
+.plugin .footer #branding a {
+    color: #555;
+    text-decoration: none;
+    display: none;
+}
+
