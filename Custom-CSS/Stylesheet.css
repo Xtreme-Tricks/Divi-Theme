@@ -5111,7 +5111,7 @@ margin-left: 10%
     color: #183247;
     display: block;
     border: 0;
-    border-bottom: 1px solid #d3dbda;
+    border-bottom: 1px solid #27aae1;
     padding: 5px 0;
     line-height: 18px;
     background: 0 0;
@@ -5122,7 +5122,7 @@ margin-left: 10%
 #wpum_loginformuser_pass:focus
 {
     outline: 0;
-    border-bottom: solid 1px #4990e2;
+    border-bottom: solid 1px #27aae1;
 }
 
 .wpum-login-form form p.login-password, .wpum-login-form form p.login-remember, .wpum-login-form form p.login-username {
@@ -5139,9 +5139,9 @@ margin-left: 10%
 
 #wpum_loginformwp-submit {
     border-radius: 3px;
-    background: #3570e9;
+    background: #27aae1;
     border: 0;
-    box-shadow: 0 1px 0 0 #c9d1d0;
+    box-shadow: 0 1px 0 0 #27aae1;
     color: #fff;
     font-size: 18px;
     font-family: Lato;
@@ -5159,7 +5159,7 @@ margin-left: 10%
         border-radius: 3px;
         background: #3570e9;
         border: 0;
-        box-shadow: 0 1px 0 0 #c9d1d0;
+        box-shadow: 0 1px 0 0 #eee;
         color: #fff;
         font-size: 18px;
         font-family: Lato;
@@ -5173,10 +5173,11 @@ margin-left: 10%
     }
 }
 
-#wpum_loginformwp-submit {
+#wpum_loginformwp-submit:hover {
     background-color: #2A5FCD;
 }
 
 .oneall_social_login_label {
-    display: none;
+    text-align: center;
 }
+
