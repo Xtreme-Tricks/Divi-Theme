@@ -5111,7 +5111,7 @@ margin-left: 10%
     color: #183247;
     display: block;
     border: 0;
-    border-bottom: 1px solid #27aae1;
+    border-bottom: 1px solid #d3dbda;
     padding: 5px 0;
     line-height: 18px;
     background: 0 0;
@@ -5181,3 +5181,10 @@ margin-left: 10%
     text-align: center;
 }
 
+/* That Ugly Dancing Page Issues Fix */
+
+#page-container { 
+    overflow:hidden; 
+}
+
+/* That's it its fixed */
