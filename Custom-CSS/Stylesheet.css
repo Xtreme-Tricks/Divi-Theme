@@ -76,6 +76,8 @@
 }
 
 #ninja_forms_form_488_response_msg,
+#ninja_forms_form_401_response_msg,
+#ninja_forms_form_413_response_msg,
 #ninja_forms_form_763_response_msg {
     font-size: 13px;
     color: #F44336;
@@ -158,9 +160,14 @@ body.et-pb-preview #main-content .container tr td {
     }
 }
 
+/* Free Counselling Hover Magic*/
+
 @media screen and (max-width:910px) {
+    #ninja_forms_field_871,
     #ninja_forms_field_971,
-    #ninja_forms_field_1404 {
+    #ninja_forms_field_883,
+    #ninja_forms_field_1404
+    {
         width: 92%!important;
         background: rgba(0,0,0,0)!important;
         transition: all 0.2s ease-in-out!important;
@@ -172,14 +179,53 @@ body.et-pb-preview #main-content .container tr td {
         border: 2px solid #fff!important;
         margin-left: 4%!important;
     }
+
+    #ninja_forms_field_883
+    {
+        width: 92%!important;
+        background: rgba(0,0,0,0);!important;
+        transition: all 0.2s ease-in-out!important;
+        padding: 12px 0!important;
+        font-family: Roboto!important;
+        font-size: 20px!important;
+        color: #222!important;
+        border-radius: 5px!important;
+        border: 2px solid #27aae1!important;
+        margin-left: 4%!important;
+    }
+
+    #ninja_forms_field_871:hover,
     #ninja_forms_field_971:hover,
     #ninja_forms_field_1404:hover
-     {
+    {
         background: #fff!important;
         color: #222!important;
         border-color: #fff!important;
     }
+
+    #ninja_forms_field_883:hover
+    {
+        background: #27aae1!important;
+        color: #fff!important;
+        border-color: rgba(0,0,0,0);!important;
+    }
+
+    #ninja_forms_field_880,
+    #ninja_forms_field_881,
+    #ninja_forms_field_882
+    {
+        height: 40px!important;
+        color: black!important;
+        background: white!important;
+        border-radius: 5px!important;
+        text-align: left!important;
+        border: 1px solid #27aae1!important;
+        font-family: lato!important;
+        font-size: 16px!important;
+    }
 }
+
+/* That's it */
 
 #ninja_forms_field_487,
 #ninja_forms_field_488,
@@ -4816,6 +4862,7 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1184,
 #ninja_forms_field_1255,
 #ninja_forms_field_1259,
+#ninja_forms_field_1404,
 #ninja_forms_field_1450 {
     width: 92%;
     background: #29aae1;
