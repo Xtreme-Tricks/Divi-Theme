@@ -1,0 +1,21 @@
+<script>
+     var WebFormEvent = {
+       afterInstall: function(){
+         console.log("After installation hook triggered.");
+       },
+       beforeSubmit: function(){
+         console.log("Before submit hook triggered.");
+     WebForm.$('<input>').attr({
+           type: 'hidden',
+           name: 'lead[custom_field][cf_utm_param]',
+           value:"Digital Marketing Course Engineerring stud"
+        }).appendTo('.fs-webform-container form');
+
+       },
+       afterSubmit: function(event, data, error){
+         console.log("After submit hook triggered.");
+         console.log("Data => ",data);
+         if(error){ console.log("Error => ",error); }
+       }
+     }
+   </script>
