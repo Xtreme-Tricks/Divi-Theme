@@ -9,7 +9,7 @@
 }
 
 .fserv-container .fserv-label {
-    display: none;
+ display: none;
 }
 
 .fserv-field+div:not(.fserv-field) {
@@ -31,35 +31,35 @@
 }
 
 .fserv-field .select2-container .select2-selection--single {
-    cursor: pointer;
-    background: rgba(255,255,255,0.12) !important;
+ cursor: pointer;
+ background: rgba(255,255,255,0.12) !important;
 }
 
 .fserv-field .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: white;
-    line-height: 28px;
-    font-family: lato;
-    font-size: 16px;
+ color: white;
+ line-height: 28px;
+ font-family: lato;
+ font-size: 16px;
 }
 
 fserv-field .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: gray;
+ color: gray;
 }
 
 .fserv-field .select2-results {
-    display: block;
-    font-family: lato;
-    font-size: 16px;
+ display: block;
+ font-family: lato;
+ font-size: 16px;
 }
 
 .fserv-field .select2-container--default .select2-search--dropdown .select2-search__field {
-    border: 1px solid #aaa;
-    font-family: lato;
-    font-size: 16px;
+ border: 1px solid #aaa;
+ font-family: lato;
+ font-size: 16px;
 }
 
 .fserv-field .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #22222;
+ color: #22222;
 }
 
 .fserv-container .fserv-input-text {
@@ -115,15 +115,15 @@ input.text, input.title, input[type=email], input[type=password], input[type=tel
  color: #fff!important;
 }
 
-.powered-by a {
-    color: #fff;
-    text-decoration: none;
-    display: none;
+.powered-by a strong {
+    color: #333;
+    display: none!important;
 }
 
-.powered-by a strong {
-    color: #fff;
-    display: none;
+.powered-by a {
+    color: #777;
+    text-decoration: none;
+    display: none!important;
 }
 
 </style>
