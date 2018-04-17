@@ -163,10 +163,7 @@ body.et-pb-preview #main-content .container tr td {
 /* Free Counselling Hover Magic*/
 
 @media screen and (max-width:910px) {
-    #ninja_forms_field_871,
-    #ninja_forms_field_971,
-    #ninja_forms_field_883,
-    #ninja_forms_field_1404
+    #ninja_forms_field_971
     {
         width: 92%!important;
         background: rgba(0,0,0,0)!important;
@@ -180,39 +177,25 @@ body.et-pb-preview #main-content .container tr td {
         margin-left: 4%!important;
     }
 
-    #ninja_forms_field_883
-    {
-        width: 92%!important;
-        background: rgba(0,0,0,0);!important;
-        transition: all 0.2s ease-in-out!important;
-        padding: 12px 0!important;
-        font-family: Roboto!important;
-        font-size: 20px!important;
-        color: #222!important;
-        border-radius: 5px!important;
-        border: 2px solid #27aae1!important;
-        margin-left: 4%!important;
-    }
-
-    #ninja_forms_field_871:hover,
-    #ninja_forms_field_971:hover,
-    #ninja_forms_field_1404:hover
+    #ninja_forms_field_971:hover
     {
         background: #fff!important;
         color: #222!important;
         border-color: #fff!important;
     }
 
-    #ninja_forms_field_883:hover
-    {
-        background: #27aae1!important;
-        color: #fff!important;
-        border-color: rgba(0,0,0,0);!important;
-    }
-
     #ninja_forms_field_880,
     #ninja_forms_field_881,
-    #ninja_forms_field_882
+    #ninja_forms_field_882,
+    #ninja_forms_field_868,
+    #ninja_forms_field_869,
+    #ninja_forms_field_870,
+    #ninja_forms_field_1110,
+    #ninja_forms_field_1111,
+    #ninja_forms_field_1112,
+    #ninja_forms_field_1400,
+    #ninja_forms_field_1401,
+    #ninja_forms_field_1402
     {
         height: 40px!important;
         color: black!important;
