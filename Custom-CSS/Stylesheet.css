@@ -1020,7 +1020,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1540,
 #ninja_forms_field_1541,
 #ninja_forms_field_1542,
-#ninja_forms_field_1543
+#ninja_forms_field_1543,
+#ninja_forms_field_1551,
+#ninja_forms_field_1552,
+#ninja_forms_field_1553,
+#ninja_forms_field_1554
  {
     height: 40px;
     color: #000;
@@ -1263,7 +1267,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1540,
 #ninja_forms_field_1541,
 #ninja_forms_field_1542,
-#ninja_forms_field_1543_div_wrap
+#ninja_forms_field_1543_div_wrap,
+#ninja_forms_field_1551,
+#ninja_forms_field_1552,
+#ninja_forms_field_1553,
+#ninja_forms_field_1554_div_wrap
 {
     margin-right: 20px;
 }
@@ -1365,7 +1373,9 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_787,
 #nf_submit_806,
 #nf_submit_814,
-#nf_submit_818
+#nf_submit_818,
+#nf_submit_822,
+#nf_submit_826
  {
     text-align: center;
     margin-top: 3%
@@ -1451,7 +1461,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_783 #ninja_forms_form_783_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_787 #ninja_forms_form_787_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_814 #ninja_forms_form_814_all_fields_wrap .field-wrap .ninja-forms-field,
-#ninja_forms_form_818 #ninja_forms_form_818_all_fields_wrap .field-wrap .ninja-forms-field
+#ninja_forms_form_818 #ninja_forms_form_818_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_822 #ninja_forms_form_822_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_826 #ninja_forms_form_826_all_fields_wrap .field-wrap .ninja-forms-field
 {
     border-radius: 5px;
     line-height: 18px;
@@ -1625,7 +1637,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1536_div_wrap,
 #ninja_forms_field_1540_div_wrap,
 #ninja_forms_field_1541_div_wrap,
-#ninja_forms_field_1542_div_wrap
+#ninja_forms_field_1542_div_wrap,
+#ninja_forms_field_1551_div_wrap,
+#ninja_forms_field_1552_div_wrap,
+#ninja_forms_field_1553_div_wrap
 {
     margin-right: 20px;
     width: 22%;
@@ -1690,7 +1705,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1432_div_wrap,
 #ninja_forms_field_1438_div_wrap,
 #ninja_forms_field_1537_div_wrap,
-#ninja_forms_field_1543_div_wrap
+#ninja_forms_field_1543_div_wrap,
+#ninja_forms_field_1553_div_wrap,
+#ninja_forms_field_1554_div_wrap
 {
     width: 22%;
     display: inline-block
@@ -2208,7 +2225,12 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_1541_div_wrap,
     #ninja_forms_field_1542_div_wrap,
     #ninja_forms_field_1543_div_wrap,
-    #ninja_forms_field_1545_div_wrap
+    #ninja_forms_field_1545_div_wrap,
+    #ninja_forms_field_1551_div_wrap,
+    #ninja_forms_field_1552_div_wrap,
+    #ninja_forms_field_1553_div_wrap,
+    #ninja_forms_field_1554_div_wrap,
+    #ninja_forms_field_1555_div_wrap
     {
         width: 100%;
         margin-top: 10px;
@@ -2860,7 +2882,10 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1233,
 #ninja_forms_field_1245,
 #ninja_forms_field_1247,
-#ninja_forms_field_1248 {
+#ninja_forms_field_1248,
+#ninja_forms_field_1546,
+#ninja_forms_field_1548,
+#ninja_forms_field_1549 {
     font-size: 16px;
     color: #fff;
     height: 40px;
@@ -2914,7 +2939,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1168,
 #ninja_forms_field_1213,
 #ninja_forms_field_1228,
-#ninja_forms_field_1340,
 #ninja_forms_field_1371,
 #ninja_forms_field_1399,
 #ninja_forms_field_1464,
@@ -2930,6 +2954,18 @@ body.et-pb-preview #main-content .container tr td {
     background: #27aae1;
     padding: .65em 1.5em;
     margin-left: 0%
+}
+
+#ninja_forms_field_1340 {
+    font-size: 16px;
+    width: 50%;
+    font-family: arial;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background: #27aae1;
+    padding: .65em 1.5em;
+    margin-left: -35%
 }
 
 #ninja_forms_form_740_mp_next,
@@ -2974,6 +3010,7 @@ body.et-pb-preview #main-content .container tr td {
     border-radius: 6px;
     color: #222;
     text-align: center;
+    margin-left: 10%;
 }
 
 #ninja_forms_field_30 {
@@ -3227,14 +3264,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1396,
 #ninja_forms_field_1397,
 #ninja_forms_field_1398,
-#ninja_forms_field_1160,
-#ninja_forms_field_1161,
-#ninja_forms_field_1162,
-#ninja_forms_field_1163,
-#ninja_forms_field_1164,
-#ninja_forms_field_1165,
-#ninja_forms_field_1166,
-#ninja_forms_field_1167,
 #ninja_forms_field_1197,
 #ninja_forms_field_1198,
 #ninja_forms_field_1199,
@@ -3366,6 +3395,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1526,
 #ninja_forms_field_1527,
 #ninja_forms_field_1528,
+#ninja_forms_field_1559,
+#ninja_forms_field_1560,
 #input_1_1,
 #input_1_2,
 #input_1_3
@@ -3380,6 +3411,30 @@ body.et-pb-preview #main-content .container tr td {
     background: #fff;
     text-align: left;
     width: 80%;
+}
+
+/*Careers Form */
+
+#ninja_forms_field_1160,
+#ninja_forms_field_1161,
+#ninja_forms_field_1162,
+#ninja_forms_field_1163,
+#ninja_forms_field_1164,
+#ninja_forms_field_1165,
+#ninja_forms_field_1166,
+#ninja_forms_field_1167
+{
+    font-size: 16px;
+    font-family: lato;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
 }
 
 #ninja_forms_field_1304,
@@ -3489,14 +3544,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1396_label,
 #ninja_forms_field_1397_label,
 #ninja_forms_field_1398_label,
-#ninja_forms_field_1160_label,
-#ninja_forms_field_1161_label,
-#ninja_forms_field_1162_label,
-#ninja_forms_field_1163_label,
-#ninja_forms_field_1164_label,
-#ninja_forms_field_1165_label,
-#ninja_forms_field_1166_label,
-#ninja_forms_field_1167_label,
 #ninja_forms_field_1187_label,
 #ninja_forms_field_1197_label,
 #ninja_forms_field_1198_label,
@@ -3643,11 +3690,28 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1527_label,
 #ninja_forms_field_1528_label,
 #ninja_forms_field_1529_label,
+#ninja_forms_field_1559_label,
+#ninja_forms_field_1560_label,
 .gfield_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
+}
+
+#ninja_forms_field_1160_label,
+#ninja_forms_field_1161_label,
+#ninja_forms_field_1162_label,
+#ninja_forms_field_1163_label,
+#ninja_forms_field_1164_label,
+#ninja_forms_field_1165_label,
+#ninja_forms_field_1166_label,
+#ninja_forms_field_1167_label 
+{
+    font-size: 18px;
+    font-family: lato;
+    color: #222;
+    margin-left: 10%;
 }
 
 /* White Labels */
@@ -3745,7 +3809,11 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1540_label,
 #ninja_forms_field_1541_label,
 #ninja_forms_field_1542_label,
-#ninja_forms_field_1543_label
+#ninja_forms_field_1543_label,
+#ninja_forms_field_1551_label,
+#ninja_forms_field_1552_label,
+#ninja_forms_field_1553_label,
+#ninja_forms_field_1554_label
 {
     font-size: 18px;
     font-family: lato;
@@ -3985,14 +4053,6 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1396_error,
 #ninja_forms_field_1397_error,
 #ninja_forms_field_1398_error,
-#ninja_forms_field_1160_error,
-#ninja_forms_field_1161_error,
-#ninja_forms_field_1162_error,
-#ninja_forms_field_1163_error,
-#ninja_forms_field_1164_error,
-#ninja_forms_field_1165_error,
-#ninja_forms_field_1166_error,
-#ninja_forms_field_1167_error,
 #ninja_forms_field_1197_error,
 #ninja_forms_field_1198_error,
 #ninja_forms_field_1199_error,
@@ -4139,10 +4199,26 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1524_error,
 #ninja_forms_field_1526_error,
 #ninja_forms_field_1527_error,
-#ninja_forms_field_1528_error
+#ninja_forms_field_1528_error,
+#ninja_forms_field_1559_error,
+#ninja_forms_field_1560_error
 {
     font-size: 18px;
     font-family: lato;
+}
+
+#ninja_forms_field_1160_error,
+#ninja_forms_field_1161_error,
+#ninja_forms_field_1162_error,
+#ninja_forms_field_1163_error,
+#ninja_forms_field_1164_error,
+#ninja_forms_field_1165_error,
+#ninja_forms_field_1166_error,
+#ninja_forms_field_1167_error 
+{
+    font-size: 18px;
+    font-family: lato;
+    margin-left: 10%;
 }
 
 #ninja_forms_form_34_response_msg,
@@ -4291,7 +4367,10 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1233_div_wrap,
 #ninja_forms_field_1245_div_wrap,
 #ninja_forms_field_1247_div_wrap,
-#ninja_forms_field_1248_div_wrap {
+#ninja_forms_field_1248_div_wrap,
+#ninja_forms_field_1546_div_wrap,
+#ninja_forms_field_1548_div_wrap,
+#ninja_forms_field_1549_div_wrap {
     width: 30%;
     margin-right: 3%;
     display: inline-block;
@@ -4312,7 +4391,8 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_1169_div_wrap,
     #ninja_forms_field_1174_div_wrap,
     #ninja_forms_field_1230_div_wrap,
-    #ninja_forms_field_1245_div_wrap {
+    #ninja_forms_field_1245_div_wrap,
+    #ninja_forms_field_1546_div_wrap {
         margin-top: 10px;
         width: 100%;
         display: inline-block
@@ -4352,7 +4432,9 @@ input[placeholder='Phone No'] {
     #ninja_forms_field_1232_div_wrap,
     #ninja_forms_field_1233_div_wrap,
     #ninja_forms_field_1247_div_wrap,
-    #ninja_forms_field_1248_div_wrap {
+    #ninja_forms_field_1248_div_wrap,
+    #ninja_forms_field_1548_div_wrap,
+    #ninja_forms_field_1549_div_wrap {
         margin-top: -15px;
         width: 100%;
         display: inline-block
@@ -5280,7 +5362,7 @@ margin-left: 10%
 /* That Ugly Dancing Page Issues Fix */
 
 #page-container { 
-    overflow:hidden; 
+    overflow: hidden; 
 }
 
 /* That's it its fixed */
