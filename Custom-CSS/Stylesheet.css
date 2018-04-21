@@ -198,7 +198,10 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_1402,
     #ninja_forms_field_1530,
     #ninja_forms_field_1531,
-    #ninja_forms_field_1532
+    #ninja_forms_field_1532,
+    #ninja_forms_field_1561,
+    #ninja_forms_field_1562,
+    #ninja_forms_field_1563
     {
         height: 40px!important;
         color: black!important;
@@ -857,7 +860,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1433,
 #ninja_forms_field_1439,
 #ninja_forms_field_1538,
-#ninja_forms_field_1544
+#ninja_forms_field_1544,
+#ninja_forms_field_1569,
+#ninja_forms_field_1575
 {
    display: none;
 }
@@ -1024,7 +1029,15 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1551,
 #ninja_forms_field_1552,
 #ninja_forms_field_1553,
-#ninja_forms_field_1554
+#ninja_forms_field_1554,
+#ninja_forms_field_1565,
+#ninja_forms_field_1566,
+#ninja_forms_field_1567,
+#ninja_forms_field_1568,
+#ninja_forms_field_1571,
+#ninja_forms_field_1572,
+#ninja_forms_field_1573,
+#ninja_forms_field_1574
  {
     height: 40px;
     color: #000;
@@ -1271,7 +1284,15 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1551,
 #ninja_forms_field_1552,
 #ninja_forms_field_1553,
-#ninja_forms_field_1554_div_wrap
+#ninja_forms_field_1554_div_wrap,
+#ninja_forms_field_1565,
+#ninja_forms_field_1566,
+#ninja_forms_field_1567,
+#ninja_forms_field_1568_div_wrap,
+#ninja_forms_field_1571,
+#ninja_forms_field_1572,
+#ninja_forms_field_1573,
+#ninja_forms_field_1574_div_wrap
 {
     margin-right: 20px;
 }
@@ -1375,7 +1396,9 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_814,
 #nf_submit_818,
 #nf_submit_822,
-#nf_submit_826
+#nf_submit_826,
+#nf_submit_834,
+#nf_submit_838
  {
     text-align: center;
     margin-top: 3%
@@ -1463,7 +1486,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_form_814 #ninja_forms_form_814_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_818 #ninja_forms_form_818_all_fields_wrap .field-wrap .ninja-forms-field,
 #ninja_forms_form_822 #ninja_forms_form_822_all_fields_wrap .field-wrap .ninja-forms-field,
-#ninja_forms_form_826 #ninja_forms_form_826_all_fields_wrap .field-wrap .ninja-forms-field
+#ninja_forms_form_826 #ninja_forms_form_826_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_834 #ninja_forms_form_834_all_fields_wrap .field-wrap .ninja-forms-field,
+#ninja_forms_form_838 #ninja_forms_form_838_all_fields_wrap .field-wrap .ninja-forms-field
 {
     border-radius: 5px;
     line-height: 18px;
@@ -1640,7 +1665,19 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1542_div_wrap,
 #ninja_forms_field_1551_div_wrap,
 #ninja_forms_field_1552_div_wrap,
-#ninja_forms_field_1553_div_wrap
+#ninja_forms_field_1553_div_wrap,
+#ninja_forms_field_1565_div_wrap,
+#ninja_forms_field_1566_div_wrap,
+#ninja_forms_field_1567_div_wrap,
+#ninja_forms_field_1534_div_wrap,
+#ninja_forms_field_1535_div_wrap,
+#ninja_forms_field_1536_div_wrap,
+#ninja_forms_field_1565_div_wrap,
+#ninja_forms_field_1566_div_wrap,
+#ninja_forms_field_1567_div_wrap,
+#ninja_forms_field_1571_div_wrap,
+#ninja_forms_field_1572_div_wrap,
+#ninja_forms_field_1573_div_wrap
 {
     margin-right: 20px;
     width: 22%;
@@ -1707,7 +1744,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1537_div_wrap,
 #ninja_forms_field_1543_div_wrap,
 #ninja_forms_field_1553_div_wrap,
-#ninja_forms_field_1554_div_wrap
+#ninja_forms_field_1554_div_wrap,
+#ninja_forms_field_1568_div_wrap,
+#ninja_forms_field_1574_div_wrap
 {
     width: 22%;
     display: inline-block
@@ -2230,7 +2269,17 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_1552_div_wrap,
     #ninja_forms_field_1553_div_wrap,
     #ninja_forms_field_1554_div_wrap,
-    #ninja_forms_field_1555_div_wrap
+    #ninja_forms_field_1555_div_wrap,
+    #ninja_forms_field_1565_div_wrap,
+    #ninja_forms_field_1566_div_wrap,
+    #ninja_forms_field_1567_div_wrap,
+    #ninja_forms_field_1568_div_wrap,
+    #ninja_forms_field_1570_div_wrap,
+    #ninja_forms_field_1571_div_wrap,
+    #ninja_forms_field_1572_div_wrap,
+    #ninja_forms_field_1573_div_wrap,
+    #ninja_forms_field_1574_div_wrap,
+    #ninja_forms_field_1576_div_wrap
     {
         width: 100%;
         margin-top: 10px;
@@ -3813,7 +3862,15 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1551_label,
 #ninja_forms_field_1552_label,
 #ninja_forms_field_1553_label,
-#ninja_forms_field_1554_label
+#ninja_forms_field_1554_label,
+#ninja_forms_field_1565_label,
+#ninja_forms_field_1566_label,
+#ninja_forms_field_1567_label,
+#ninja_forms_field_1568_label,
+#ninja_forms_field_1571_label,
+#ninja_forms_field_1572_label,
+#ninja_forms_field_1573_label,
+#ninja_forms_field_1574_label
 {
     font-size: 18px;
     font-family: lato;
@@ -4831,7 +4888,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1256_div_wrap,
 #ninja_forms_field_1400_div_wrap,
 #ninja_forms_field_1447_div_wrap,
-#ninja_forms_field_1530_div_wrap {
+#ninja_forms_field_1530_div_wrap,
+#ninja_forms_field_1561_div_wrap {
     width: 92%;
     margin-left: 4%;
     display: inline-block;
@@ -4877,7 +4935,9 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1448_div_wrap,
 #ninja_forms_field_1449_div_wrap,
 #ninja_forms_field_1531_div_wrap,
-#ninja_forms_field_1532_div_wrap {
+#ninja_forms_field_1532_div_wrap,
+#ninja_forms_field_1562_div_wrap,
+#ninja_forms_field_1563_div_wrap {
     width: 92%;
     margin-left: 4%;
     display: inline-block;
@@ -4943,7 +5003,10 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1449,
 #ninja_forms_field_1530,
 #ninja_forms_field_1531,
-#ninja_forms_field_1532
+#ninja_forms_field_1532,
+#ninja_forms_field_1561,
+#ninja_forms_field_1562,
+#ninja_forms_field_1563
  {
     height: 40px;
     color: #f9f9f9;
@@ -4986,7 +5049,8 @@ input[placeholder='Phone No'] {
 #ninja_forms_field_1259,
 #ninja_forms_field_1404,
 #ninja_forms_field_1450,
-#ninja_forms_field_1533
+#ninja_forms_field_1533,
+#ninja_forms_field_1564
  {
     width: 92%;
     background: #29aae1;
@@ -5257,7 +5321,8 @@ margin-left: 10%
 
 /* Login and Registration Form */
 
-.wpum-login-form form label {
+.wpum-login-form form label,
+.wpum-registration-form fieldset label {
     display: block;
     margin: 0;
     width: 55%;
@@ -5303,7 +5368,7 @@ margin-left: 10%
     border-bottom: solid 1px #27aae1;
 }
 
-.wpum-login-form form p.login-password, .wpum-login-form form p.login-remember, .wpum-login-form form p.login-username {
+.wpum-login-form form p.login-password, .wpum-login-form form p.login-remember, .wpum-login-form form p.login-username, .wpum-password-form fieldset label {
     margin: 0 0 1em;
     padding: 0 0 1em;
     line-height: 2em;
@@ -5315,7 +5380,9 @@ margin-left: 10%
     zoom: 1;
 }
 
-#wpum_loginformwp-submit {
+#wpum_loginformwp-submit,
+#submit_wpum_register,
+#submit_wpum_password {
     border-radius: 3px;
     background: #27aae1;
     border: 0;
@@ -5333,7 +5400,7 @@ margin-left: 10%
 }
 
 @media screen and (max-width:910px) {
-    #wpum_loginformwp-submit {
+    #wpum_loginformwp-submit  {
         border-radius: 3px;
         background: #3570e9;
         border: 0;
@@ -5351,7 +5418,8 @@ margin-left: 10%
     }
 }
 
-#wpum_loginformwp-submit:hover {
+#wpum_loginformwp-submit:hover,
+#submit_wpum_register:hover {
     background-color: #2A5FCD;
 }
 
@@ -5359,10 +5427,125 @@ margin-left: 10%
     text-align: center;
 }
 
+/* Registration Page Starts From Here */
+
+.wpum-registration-form fieldset input.input-email,
+.wpum-registration-form fieldset input.input-text
+{
+    width: 105%;
+    font-size: 14px;
+    color: #183247;
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #d3dbda;
+    padding: 5px 0;
+    line-height: 18px;
+    background: 0 0;
+    margin-left: -28%
+}
+
+.wpum-registration-form fieldset input.input-email:focus,
+.wpum-registration-form fieldset input.input-text:focus,
+.wpum-password-form fieldset input.input-text:focus
+{
+    outline: 0;
+    border-bottom: solid 1px #27aae1;
+}
+
+.wpum-password-form fieldset, .wpum-profile-form fieldset, .wpum-registration-form fieldset, .wpum-update-password-form fieldset {
+    margin: 0 0 1em;
+    padding: 0 0 1em;
+    line-height: 2em;
+    border: 0;
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom: 0px solid #eee;
+}
+
+@media screen and (max-width:910px) {
+    #submit_wpum_register,
+    #submit_wpum_password  {
+        border-radius: 3px;
+        background: #3570e9;
+        border: 0;
+        box-shadow: 0 1px 0 0 #eee;
+        color: #fff;
+        font-size: 18px;
+        font-family: Lato;
+        padding: 11px 0;
+        cursor: pointer;
+        line-height: 18px;
+        width: 45%;
+        height: 10%;
+        font-weight: 600;
+        margin-left: 25%;
+    }
+}
+
+div.wpum-helper-links p {
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.wpum-required-star {
+    color: #ff0905;
+    margin-left: 2%;
+}
+
+/* Forgot Password Code */
+
+.wpum-password-form fieldset label {
+    width: 105%;
+    font-size: 15px;
+    color: #183247;
+    display: block;
+    border: 0;
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-bottom: 0px solid #d3dbda;
+    padding: 5px 0;
+    line-height: 18px;
+    background: 0 0;
+    margin-left: 10%;
+
+}
+
+.wpum-password-form fieldset input.input-text 
+{
+    width: 105%;
+    font-size: 14px;
+    color: #183247;
+    display: block;
+    border: 0;
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-bottom: 1px solid #d3dbda;
+    padding: 5px 0;
+    line-height: 18px;
+    background: 0 0;
+    margin-left: -28%;
+}
+
+.wpum-message, .wpum-info, .wpum-lost-psw-message {
+    text-align: center;
+    font-size: 14px;
+    font-family: lato
+}
+
 /* That Ugly Dancing Page Issues Fix */
 
 #page-container { 
-    overflow: hidden; 
+    overflow:hidden; 
 }
 
 /* That's it its fixed */
