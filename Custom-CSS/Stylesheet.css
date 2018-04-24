@@ -5464,8 +5464,7 @@ margin-left: 10%
 }
 
 @media screen and (max-width:910px) {
-    #submit_wpum_register,
-    #submit_wpum_password  {
+    #submit_wpum_register {
         border-radius: 3px;
         background: #3570e9;
         border: 0;
@@ -5480,6 +5479,23 @@ margin-left: 10%
         height: 10%;
         font-weight: 600;
         margin-left: 25%;
+    }
+
+    #submit_wpum_password  {
+        border-radius: 3px;
+        background: #3570e9;
+        border: 0;
+        box-shadow: 0 1px 0 0 #eee;
+        color: #fff;
+        font-size: 18px;
+        font-family: Lato;
+        padding: 11px 0;
+        cursor: pointer;
+        line-height: 18px;
+        width: 55%;
+        height: 10%;
+        font-weight: 600;
+        margin-left: 20%;
     }
 }
 
@@ -5549,3 +5565,19 @@ div.wpum-helper-links p {
 }
 
 /* That's it its fixed */
+
+/* Divi Bug Fix Image Fix */
+
+.et_animated {
+    opacity: 5!important;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+}
+
+.et-waypoint {
+    opacity: 7!important;
+}
+
+/*End Of That Bug */
