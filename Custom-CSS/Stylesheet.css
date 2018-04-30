@@ -5565,19 +5565,3 @@ div.wpum-helper-links p {
 }
 
 /* That's it its fixed */
-
-/* Divi Bug Fix Image Fix */
-
-.et_animated {
-    opacity: 5!important;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both !important;
-    animation-fill-mode: both !important;
-}
-
-.et-waypoint {
-    opacity: 7!important;
-}
-
-/*End Of That Bug */
