@@ -3,14 +3,13 @@
        afterInstall: function(){
          console.log("After installation hook triggered.");
        },
-       beforeSubmit: function(){
-         console.log("Before submit hook triggered.");
-     WebForm.$('<input>').attr({
-           type: 'hidden',
-           name: 'lead[custom_field][cf_utm_param]',
-           value:"Digital Marketing Course Engineerring stud"
-        }).appendTo('.fs-webform-container form');
-
+       beforeSubmit: function(form) {
+        console.log("Before submit hook triggered.");
+           jQuery('<input>').attr({
+             type: 'hidden',
+              name: 'lead[custom_field][cf_utm_param]',
+            value:"Organic - Professionals"
+         }).appendTo(form);
        },
        afterSubmit: function(event, data, error){
          console.log("After submit hook triggered.");
