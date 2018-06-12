@@ -3441,6 +3441,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1559,
 #ninja_forms_field_1560,
 #ninja_forms_field_1614,
+#ninja_forms_field_1617,
+#ninja_forms_field_1620,
 #input_1_1,
 #input_1_2,
 #input_1_3
@@ -3455,7 +3457,6 @@ body.et-pb-preview #main-content .container tr td {
     background: #fff;
     text-align: left;
     width: 80%;
-	margin-left: 10%
 }
 
 #ninja_forms_field_1197,
@@ -3481,7 +3482,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1606,
 #ninja_forms_field_1613,
 #ninja_forms_field_1608,
-#ninja_forms_field_1616
+#ninja_forms_field_1616,
+#ninja_forms_field_1618,
+#ninja_forms_field_1621
 {
     font-size: 16px;
     font-family: lato;
@@ -3794,12 +3797,13 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1559_label,
 #ninja_forms_field_1560_label,
 #ninja_forms_field_1614_label,
+#ninja_forms_field_1617_label,
+#ninja_forms_field_1620_label,
 .gfield_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
-	margin-left: 10%
 }
 
 #ninja_forms_field_1160_label,
@@ -3840,8 +3844,9 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1284_label,
 #ninja_forms_field_1345_label,
 #ninja_forms_field_1357_label,
-#ninja_forms_field_1616_label
-
+#ninja_forms_field_1616_label,
+#ninja_forms_field_1618_label,
+#ninja_forms_field_1621_label
 {
     font-size: 18px;
     font-family: lato;
@@ -5675,4 +5680,16 @@ div.wpum-helper-links p {
     text-align: center;
     font-size: 14px;
     font-family: lato
+}
+
+.widgettitle {
+    font-size: 15px;
+    border-radius: 3px 3px 2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    background: #27aae1;
+    color: #FFF;
+    padding: 10px 10px;
+    font-family: lato;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
