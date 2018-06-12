@@ -7,7 +7,7 @@
         console.log("Before submit hook triggered.");
            jQuery('<input>').attr({
              type: 'hidden',
-              name: 'lead[custom_field][cf_utm_param]',
+              name: 'lead[custom_field][cf_utm_parameters]',
             value:"Organic - Professionals"
          }).appendTo(form);
        },
