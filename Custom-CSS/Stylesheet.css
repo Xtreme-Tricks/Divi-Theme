@@ -726,11 +726,26 @@ body.et-pb-preview #main-content .container tr td {
     margin-right: 20px
 }
 
+#nf_submit_868 
+{
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+@media screen and (max-width:910px) {
+#nf_submit_868 
+{
+    text-align: center;
+    margin-top: 4%;
+}
+}
+
+
 #nf_submit_229,
 #nf_submit_458,
 #nf_submit_614,
 #nf_submit_189,
-#nf_submit_642
+#nf_submit_642,
  {
     text-align: center;
     margin-top: 4%
@@ -1040,14 +1055,16 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1571,
 #ninja_forms_field_1572,
 #ninja_forms_field_1573,
-#ninja_forms_field_1574
+#ninja_forms_field_1574,
+#ninja_forms_field_1649
  {
     height: 40px;
     color: #000;
     width:100%;
     background-color: rgba(255, 255, 255, .5);
     border: #fff;
-    text-align: center
+    text-align: center;
+	margin-left: 10%;
 }
 
 /*--end--*/
@@ -2493,6 +2510,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1474:hover,
 #ninja_forms_field_1522:hover,
 #ninja_forms_field_1609:hover,
+#ninja_forms_field_1648:hover,
 #gform_submit_button_1:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover,
@@ -2532,6 +2550,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1464_div_wrap,
 #ninja_forms_field_1474_div_wrap,
 #ninja_forms_field_1609_div_wrap,
+#ninja_forms_field_1648_div_wrap,
 #gform_submit_button_1_div_wrap,
 #ninja_forms_form_740_mp_next_div_wrap,
 #ninja_forms_form_740_mp_prev_div_wrap,
@@ -2611,6 +2630,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1474,
 #ninja_forms_field_1522,
 #ninja_forms_field_1609,
+#ninja_forms_field_1648,
 #gform_submit_button_1,
 #ninja_forms_form_740_mp_next,
 #ninja_forms_form_740_mp_prev,
@@ -3007,7 +3027,8 @@ body.et-pb-preview #main-content .container tr td {
     margin-left: 0%
 }
 
-#ninja_forms_field_1340 {
+#ninja_forms_field_1340,
+#ninja_forms_field_1648 {
     font-size: 16px;
     width: 50%;
     font-family: arial;
@@ -3150,6 +3171,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1474:hover,
 #ninja_forms_field_1522:hover,
 #ninja_forms_field_1609:hover,
+#ninja_forms_field_1648:hover,
 #gform_submit_button_1:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover,
@@ -3443,6 +3465,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1614,
 #ninja_forms_field_1617,
 #ninja_forms_field_1620,
+#ninja_forms_field_1652,
 #input_1_1,
 #input_1_2,
 #input_1_3
@@ -3457,6 +3480,7 @@ body.et-pb-preview #main-content .container tr td {
     background: #fff;
     text-align: left;
     width: 80%;
+	margin-left: 10%;
 }
 
 #ninja_forms_field_1197,
@@ -3526,7 +3550,35 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1164,
 #ninja_forms_field_1165,
 #ninja_forms_field_1166,
-#ninja_forms_field_1167
+#ninja_forms_field_1167,
+/*-------------------------------Mahindra LP ----------------------------------------------------*/
+#ninja_forms_field_1623,
+#ninja_forms_field_1624,
+#ninja_forms_field_1625,
+#ninja_forms_field_1626,
+#ninja_forms_field_1627,
+#ninja_forms_field_1628,
+#ninja_forms_field_1629,
+#ninja_forms_field_1630,
+#ninja_forms_field_1631,
+#ninja_forms_field_1632,
+#ninja_forms_field_1633,
+#ninja_forms_field_1634,
+#ninja_forms_field_1635,
+#ninja_forms_field_1636,
+#ninja_forms_field_1637,
+#ninja_forms_field_1638,
+#ninja_forms_field_1639,
+#ninja_forms_field_1640,
+#ninja_forms_field_1641,
+#ninja_forms_field_1642,
+#ninja_forms_field_1643,
+#ninja_forms_field_1644,
+#ninja_forms_field_1645,
+#ninja_forms_field_1646,
+#ninja_forms_field_1647,
+#ninja_forms_field_1650,
+#ninja_forms_field_1651
 {
     font-size: 16px;
     font-family: lato;
@@ -3582,6 +3634,7 @@ body.et-pb-preview #main-content .container tr td {
     background: #fff;
     text-align: left;
     width: 80%;
+	margin-left: 10%
 }
 
 #ninja_forms_field_1200,
@@ -3799,11 +3852,12 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1614_label,
 #ninja_forms_field_1617_label,
 #ninja_forms_field_1620_label,
-.gfield_label
+#ninja_forms_field_1652_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
+	margin-left: 10%;
 }
 
 #ninja_forms_field_1160_label,
@@ -3846,12 +3900,48 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1357_label,
 #ninja_forms_field_1616_label,
 #ninja_forms_field_1618_label,
-#ninja_forms_field_1621_label
+#ninja_forms_field_1621_label,
+/*-------------------------------Mahindra LP ----------------------------------------------------*/
+#ninja_forms_field_1623_label,
+#ninja_forms_field_1624_label,
+#ninja_forms_field_1625_label,
+#ninja_forms_field_1626_label,
+#ninja_forms_field_1627_label,
+#ninja_forms_field_1628_label,
+#ninja_forms_field_1629_label,
+#ninja_forms_field_1630_label,
+#ninja_forms_field_1631_label,
+#ninja_forms_field_1632_label,
+#ninja_forms_field_1633_label,
+#ninja_forms_field_1634_label,
+#ninja_forms_field_1635_label,
+#ninja_forms_field_1636_label,
+#ninja_forms_field_1637_label,
+#ninja_forms_field_1638_label,
+#ninja_forms_field_1639_label,
+#ninja_forms_field_1640_label,
+#ninja_forms_field_1641_label,
+#ninja_forms_field_1642_label,
+#ninja_forms_field_1643_label,
+#ninja_forms_field_1644_label,
+#ninja_forms_field_1645_label,
+#ninja_forms_field_1646_label,
+#ninja_forms_field_1647_label,
+#ninja_forms_field_1650_label,
+#ninja_forms_field_1651_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
     margin-left: 10%;
+}
+
+#ninja_forms_field_1630_div_wrap,
+#ninja_forms_field_1632_div_wrap,
+#ninja_forms_field_1636_div_wrap,
+#ninja_forms_field_1639_div_wrap
+ {
+  text-align: center;  
 }
 
 /* White Labels */
@@ -5692,4 +5782,9 @@ div.wpum-helper-links p {
     font-family: lato;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+#media_image-2
+{
+    max-width: 140%;
 }
