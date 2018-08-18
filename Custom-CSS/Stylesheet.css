@@ -60,7 +60,7 @@
     right: 10px;
     opacity: 0;
     line-height: 1em;
-    content: "\35";
+    content: "35";
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     transition: all .2s
@@ -5572,7 +5572,7 @@ margin-left: 10%
     padding: 5px 0;
     line-height: 18px;
     background: 0 0;
-    margin-left: 10%
+    margin-right: 15%;
 }
 
 #wpum_loginformuser_login:focus,
