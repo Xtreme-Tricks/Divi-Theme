@@ -3465,7 +3465,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1614,
 #ninja_forms_field_1617,
 #ninja_forms_field_1620,
-#ninja_forms_field_1652,
+#ninja_forms_field_1659,
 #input_1_1,
 #input_1_2,
 #input_1_3
@@ -3526,7 +3526,8 @@ body.et-pb-preview #main-content .container tr td {
 
 #ninja_forms_field_1598,
 #ninja_forms_field_1601,
-#ninja_forms_field_1602 
+#ninja_forms_field_1602,
+#ninja_forms_field_1659
 {
     font-size: 16px;
     font-family: lato;
@@ -3852,12 +3853,12 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1614_label,
 #ninja_forms_field_1617_label,
 #ninja_forms_field_1620_label,
-#ninja_forms_field_1652_label
+#ninja_forms_field_1659_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
-	margin-left: 10%;
+	margin-left: 10%
 }
 
 #ninja_forms_field_1160_label,
