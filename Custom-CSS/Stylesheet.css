@@ -13,7 +13,8 @@
 #ninja_forms_form_449_all_fields_wrap .field-wrap,
 #ninja_forms_form_246_all_fields_wrap .field-wrap,
 #ninja_forms_form_257_all_fields_wrap .field-wrap,
-#ninja_forms_form_83_all_fields_wrap  .field-wrap {
+#ninja_forms_form_83_all_fields_wrap  .field-wrap,
+#ninja_forms_form_873_all_fields_wrap  .field-wrap{
     margin-bottom: 2px
 }
 
@@ -30,6 +31,12 @@
         margin-right: 0px;
         margin-left: 0px;
     margin-left: 45%!important;
+}
+
+#wpum-psw-footer {
+    margin-left: -30%;
+    margin-top: 5%;
+    margin-bottom: -5%;
 }
 
 @media screen and (max-width:910px) {
@@ -204,7 +211,18 @@ body.et-pb-preview #main-content .container tr td {
     #ninja_forms_field_1532,
     #ninja_forms_field_1561,
     #ninja_forms_field_1562,
-    #ninja_forms_field_1563
+    #ninja_forms_field_1563,
+	#ninja_forms_field_1668,
+	#ninja_forms_field_1670,
+	#ninja_forms_field_1671,
+	#ninja_forms_field_1672,
+	#ninja_forms_field_1673,
+	#ninja_forms_field_1674,
+	#ninja_forms_field_1675,
+	#ninja_forms_field_1676,
+	#ninja_forms_field_1677,
+	#ninja_forms_field_1678,
+	#ninja_forms_field_1679
     {
         height: 40px!important;
         color: black!important;
@@ -696,11 +714,15 @@ body.et-pb-preview #main-content .container tr td {
     font-size: 16px
 }
 
-.ninja-forms-form-740-mp-page div,
-.ninja-forms-form-806-mp-page div {
+.ninja-forms-form-740-mp-page div {
     font-size: 16px;
     font-family: lato;
     margin-left: 10%;
+}
+
+.ninja-forms-form-806-mp-page div {
+     font-size: 16px;
+    font-family: lato;
 }
 
 #ninja_forms_form_6_mp_nav_wrap,
@@ -745,7 +767,7 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_458,
 #nf_submit_614,
 #nf_submit_189,
-#nf_submit_642,
+#nf_submit_642
  {
     text-align: center;
     margin-top: 4%
@@ -1983,13 +2005,25 @@ body.et-pb-preview #main-content .container tr td {
 #nf_submit_500,
 #nf_submit_609,
 #nf_submit_634,
-#nf_submit_7
+#nf_submit_7,
+#nf_submit_873
  {
     text-align: center;
     margin-top: 3%
 }
 
+#nf_submit_873{
+	margin-left: 25%;
+	margin-top: 4%;
+}
+
 #nf_submit_441 {
+    text-align: center;
+    margin-top: 3%;
+    margin-right: 20%
+}
+
+#nf_submit_880 {
     text-align: center;
     margin-top: 3%;
     margin-right: 20%
@@ -2511,6 +2545,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1522:hover,
 #ninja_forms_field_1609:hover,
 #ninja_forms_field_1648:hover,
+#ninja_forms_field_1669:hover,
+#ninja_forms_field_1687:hover,
 #gform_submit_button_1:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover,
@@ -2526,8 +2562,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1502_breadcrumb:hover,
 #ninja_forms_field_1512_breadcrumb:hover,
 #ninja_forms_field_1521_breadcrumb:hover,
-#ninja_forms_field_1523_breadcrumb:hover,
-
+#ninja_forms_field_1523_breadcrumb:hover
  {
     cursor: pointer;
     text-align: center
@@ -2551,6 +2586,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1474_div_wrap,
 #ninja_forms_field_1609_div_wrap,
 #ninja_forms_field_1648_div_wrap,
+#ninja_forms_field_1687_div_wrap,
+#ninja_forms_field_1669_div_wrap,
 #gform_submit_button_1_div_wrap,
 #ninja_forms_form_740_mp_next_div_wrap,
 #ninja_forms_form_740_mp_prev_div_wrap,
@@ -2631,6 +2668,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1522,
 #ninja_forms_field_1609,
 #ninja_forms_field_1648,
+#ninja_forms_field_1687,
+#ninja_forms_field_1669,
 #gform_submit_button_1,
 #ninja_forms_form_740_mp_next,
 #ninja_forms_form_740_mp_prev,
@@ -3028,7 +3067,9 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 #ninja_forms_field_1340,
-#ninja_forms_field_1648 {
+#ninja_forms_field_1648,
+#ninja_forms_field_1687,
+#ninja_forms_field_1669 {
     font-size: 16px;
     width: 50%;
     font-family: arial;
@@ -3037,7 +3078,7 @@ body.et-pb-preview #main-content .container tr td {
     text-align: center;
     background: #27aae1;
     padding: .65em 1.5em;
-    margin-left: -35%
+    margin-left: -35%;
 }
 
 #ninja_forms_form_740_mp_next,
@@ -3172,6 +3213,8 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1522:hover,
 #ninja_forms_field_1609:hover,
 #ninja_forms_field_1648:hover,
+#ninja_forms_field_1687:hover,
+#ninja_forms_field_1669:hover,
 #gform_submit_button_1:hover,
 #ninja_forms_form_740_mp_next:hover,
 #ninja_forms_form_740_mp_prev:hover,
@@ -3565,6 +3608,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1165,
 #ninja_forms_field_1166,
 #ninja_forms_field_1167,
+#ninja_forms_field_1667,
 /*-------------------------------Mahindra LP ----------------------------------------------------*/
 #ninja_forms_field_1623,
 #ninja_forms_field_1624,
@@ -3592,7 +3636,16 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1646,
 #ninja_forms_field_1647,
 #ninja_forms_field_1650,
-#ninja_forms_field_1651
+#ninja_forms_field_1651,
+#ninja_forms_field_1660,
+#ninja_forms_field_1661,
+#ninja_forms_field_1662,
+#ninja_forms_field_1663,
+#ninja_forms_field_1664,
+#ninja_forms_field_1666,
+#ninja_forms_field_1727,
+#ninja_forms_field_1728,
+#ninja_forms_field_1729
 {
     font-size: 16px;
     font-family: lato;
@@ -3606,6 +3659,61 @@ body.et-pb-preview #main-content .container tr td {
     width: 80%;
     margin-left: 10%;
 }
+/*-------------------------------Meetup feedback ----------------------------------------------------*/
+#ninja_forms_field_1668,
+#ninja_forms_field_1670,
+#ninja_forms_field_1671,
+#ninja_forms_field_1672,
+#ninja_forms_field_1673,
+#ninja_forms_field_1674,
+#ninja_forms_field_1675,
+#ninja_forms_field_1676,
+#ninja_forms_field_1677,
+#ninja_forms_field_1678,
+#ninja_forms_field_1679
+{
+    font-size: 16px;
+    font-family: open sans;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------Games Night feedback ----------------------------------------------------*/
+
+
+#ninja_forms_field_1688,
+#ninja_forms_field_1689,
+#ninja_forms_field_1690,
+#ninja_forms_field_1691,
+#ninja_forms_field_1692,
+#ninja_forms_field_1693,
+#ninja_forms_field_1694,
+#ninja_forms_field_1696,
+#ninja_forms_field_1697,
+#ninja_forms_field_1698
+{
+    font-size: 16px;
+    font-family: open sans;
+    color: #222;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #46b8e7;
+    background: #fff;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
 
 #ninja_forms_field_1304,
 #ninja_forms_field_1305,
@@ -3900,6 +4008,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1165_label,
 #ninja_forms_field_1166_label,
 #ninja_forms_field_1167_label,
+#ninja_forms_field_1667_label,
 #ninja_forms_field_1278_label,
 #ninja_forms_field_1594_label,
 #ninja_forms_field_1595_label,
@@ -3960,13 +4069,63 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1646_label,
 #ninja_forms_field_1647_label,
 #ninja_forms_field_1650_label,
-#ninja_forms_field_1651_label
+#ninja_forms_field_1651_label,
+#ninja_forms_field_1660_label,
+#ninja_forms_field_1661_label,
+#ninja_forms_field_1662_label,
+#ninja_forms_field_1663_label,
+#ninja_forms_field_1664_label,
+#ninja_forms_field_1666_label,
+#ninja_forms_field_1729_label,
+#ninja_forms_field_1728_label,
+#ninja_forms_field_1727_label
 {
     font-size: 18px;
     font-family: lato;
     color: #222;
     margin-left: 10%;
 }
+/*-------------------------------Meetup feedback ----------------------------------------------------*/
+#ninja_forms_field_1668_label,
+#ninja_forms_field_1670_label,
+#ninja_forms_field_1671_label,
+#ninja_forms_field_1672_label,
+#ninja_forms_field_1673_label,
+#ninja_forms_field_1674_label,
+#ninja_forms_field_1675_label,
+#ninja_forms_field_1676_label,
+#ninja_forms_field_1677_label,
+#ninja_forms_field_1678_label,
+#ninja_forms_field_1679_label
+
+{
+    font-size: 18px;
+    font-family: open sans;
+    color: #222;
+    margin-left: 10%;
+}
+
+/*-------------------------------Games Night feedback ----------------------------------------------------*/
+
+
+#ninja_forms_field_1688_label,
+#ninja_forms_field_1689_label,
+#ninja_forms_field_1690_label,
+#ninja_forms_field_1691_label,
+#ninja_forms_field_1692_label,
+#ninja_forms_field_1693_label,
+#ninja_forms_field_1694_label,
+#ninja_forms_field_1696_label,
+#ninja_forms_field_1697_label,
+#ninja_forms_field_1698_label
+{
+    font-size: 18px;
+    font-family: open sans;
+    color: #222;
+    margin-left: 10%;
+}
+
+
 
 #ninja_forms_field_1630_div_wrap,
 #ninja_forms_field_1632_div_wrap,
@@ -4502,6 +4661,7 @@ body.et-pb-preview #main-content .container tr td {
 #ninja_forms_field_1165_error,
 #ninja_forms_field_1166_error,
 #ninja_forms_field_1167_error,
+#ninja_forms_field_1667_error,
 #ninja_forms_field_1594_error,
 #ninja_forms_field_1595_error,
 #ninja_forms_field_1596_error,
@@ -4539,6 +4699,10 @@ body.et-pb-preview #main-content .container tr td {
     font-size: 18px;
     text-align: center;
     font-family: lato;
+}
+
+#ninja_forms_field_1708 {
+    display: none;
 }
 
 /*Careers Form end */
