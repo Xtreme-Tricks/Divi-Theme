@@ -1,7 +1,33 @@
 <?php
 
 if ( ! function_exists( 'et_core_api_email_init' ) ):
-function et_core_api_email_init() {}
+function et_core_api_email_init() {
+	if ( defined( 'ET_CORE_UPDATED' ) ) {
+		et_core_api_email_fetch_all_lists();
+	}
+}
+endif;
+
+
+if ( ! function_exists( 'et_core_api_email_fetch_all_lists' ) ):
+/**
+ * Fetch the latest email lists for all provider accounts and update the database accordingly.
+ *
+ * @since 3.4
+ */
+function et_core_api_email_fetch_all_lists() {
+	$providers    = ET_Core_API_Email_Providers::instance();
+	$all_accounts = $providers->accounts();
+
+	foreach ( $all_accounts as $provider_slug => $accounts ) {
+		$provider = $providers->get( $provider_slug, '' );
+
+		foreach ( $accounts as $account ) {
+			$provider->set_account_name( $account );
+			$provider->fetch_subscriber_lists();
+		}
+	}
+}
 endif;
 
 
@@ -22,17 +48,21 @@ function et_core_api_email_fetch_lists( $name_or_slug, $account, $api_key = '' )
 	}
 
 	if ( empty( $name_or_slug ) || empty( $account ) ) {
-		return esc_html__( 'ERROR: Invalid arguments.', 'et_core' );
+		return __( 'ERROR: Invalid arguments.', 'et_core' );
 	}
 
-	$providers = et_core_api_email_providers();
-	$provider  = $providers->get( $name_or_slug, $account );
+	$providers = ET_Core_API_Email_Providers::instance();
+	$provider  = $providers->get( $name_or_slug, $account, 'builder' );
 
 	if ( ! $provider ) {
 		return '';
 	}
 
-	if ( '' !== $api_key ) {
+	if ( is_array( $api_key ) ) {
+		foreach ( $api_key as $field_name => $value ) {
+			$provider->data[ $field_name ] = sanitize_text_field( $value );
+		}
+	} else if ( '' !== $api_key ) {
 		$provider->data['api_key'] = sanitize_text_field( $api_key );
 	}
 
@@ -42,14 +72,13 @@ endif;
 
 
 if ( ! function_exists( 'et_core_api_email_providers' ) ):
+/**
+ * @deprecated {@see ET_Core_API_Email_Providers::instance()}
+ *
+ * @return ET_Core_API_Email_Providers
+ */
 function et_core_api_email_providers() {
-	static $providers = null;
-
-	if ( null === $providers ) {
-		$providers = new ET_Core_API_Email_Providers();
-	}
-
-	return $providers;
+	return ET_Core_API_Email_Providers::instance();
 }
 endif;
 
@@ -91,7 +120,7 @@ function et_core_api_email_remove_account( $name_or_slug, $account ) {
 			break;
 	}
 
-	$providers = et_core_api_email_providers();
+	$providers = ET_Core_API_Email_Providers::instance();
 	$provider  = $providers->get( $name_or_slug, $account );
 
 	if ( $provider ) {

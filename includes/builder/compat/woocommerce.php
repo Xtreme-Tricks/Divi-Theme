@@ -16,7 +16,7 @@ function et_builder_used_in_wc_shop() {
 }
 
 /**
- * Use page.php as template for  a page which uses builder & being set as shop page
+ * Use page.php as template for a page which uses builder & being set as shop page
  * @param  string path to template
  * @return string modified path to template
  */
@@ -28,7 +28,7 @@ function et_builder_wc_template_include( $template ) {
 
 	return $template;
 }
-add_action( 'template_include', 'et_builder_wc_template_include' );
+add_filter( 'template_include', 'et_builder_wc_template_include', 20 );
 
 /**
  * Overwrite WooCommerce's custom query in shop page if the page uses builder.
@@ -53,6 +53,10 @@ function et_builder_wc_pre_get_posts( $query ) {
 	}
 
 	if ( ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( $query->is_search() ) {
 		return;
 	}
 
@@ -95,8 +99,8 @@ function et_builder_wc_pre_get_posts( $query ) {
 	$query->set( 'wc_query',       null );
 	$query->set( 'meta_query',     array() );
 
-	$query->is_page              = true;
 	$query->is_singular          = true;
+	$query->is_page              = true;
 	$query->is_post_type_archive = false;
 	$query->is_archive           = false;
 

@@ -44,9 +44,12 @@ function _et_core_find_latest( $return = 'path' ) {
 
 	unset( $ET_CORE_VERSION );
 
-	$version_files = glob( "{$content_dir}/{themes,plugins}/*/core/_et_core_version.php", GLOB_BRACE );
+	$version_files = array_merge(
+		(array) glob( "{$content_dir}/themes/*/core/_et_core_version.php" ),
+		(array) glob( "{$content_dir}/plugins/*/core/_et_core_version.php" )
+	);
 
-	foreach ( (array) $version_files as $version_file ) {
+	foreach ( $version_files as $version_file ) {
 		$version_file = _et_core_normalize_path( $version_file );
 
 		if ( ! is_file( $version_file ) || 0 === strpos( $version_file, $this_core_path ) ) {
@@ -115,12 +118,12 @@ function _et_core_load_latest() {
 		return;
 	}
 
-	$core_path      = get_site_transient( 'et_core_path' );
+	$core_path      = get_transient( 'et_core_path' );
 	$version_file   = $core_path ? file_exists( $core_path . '/_et_core_version.php' ) : false;
 	$have_core_path = $core_path && $version_file && ! defined( 'ET_DEBUG' );
 
 	if ( $have_core_path && _et_core_path_belongs_to_active_product( $core_path ) ) {
-		$core_version      = get_site_transient( 'et_core_version' );
+		$core_version      = get_transient( 'et_core_version' );
 		$core_path_changed = false;
 	} else {
 		$core_path         = _et_core_find_latest();
@@ -140,8 +143,8 @@ function _et_core_load_latest() {
 	if ( $core_path_override ) {
 		$core_path = $core_path_override;
 	} else if ( $core_path_changed ) {
-		set_site_transient( 'et_core_path', $core_path, DAY_IN_SECONDS );
-		set_site_transient( 'et_core_version', $core_version, DAY_IN_SECONDS );
+		set_transient( 'et_core_path', $core_path, DAY_IN_SECONDS );
+		set_transient( 'et_core_version', $core_version, DAY_IN_SECONDS );
 	}
 
 	define( 'ET_CORE_VERSION', $core_version );

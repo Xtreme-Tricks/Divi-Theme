@@ -77,32 +77,11 @@ function et_core_autoloader( $class_name ) {
 }
 endif;
 
-
-if ( ! function_exists( 'et_core_browser_body_class' ) ) :
-function et_core_browser_body_class( $classes ) {
-	global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
-
-	if( $is_lynx ) $classes[] = 'lynx';
-	elseif( $is_gecko ) $classes[] = 'gecko';
-	elseif( $is_opera ) $classes[] = 'opera';
-	elseif( $is_NS4 ) $classes[] = 'ns4';
-	elseif( $is_safari ) $classes[] = 'safari';
-	elseif( $is_chrome ) $classes[] = 'chrome';
-	elseif( $is_IE ) $classes[] = 'ie';
-	else $classes[] = 'unknown';
-
-	if( $is_iphone ) $classes[] = 'iphone';
-	return $classes;
-}
-endif;
-add_filter( 'body_class', 'et_core_browser_body_class' );
-
-
 if ( ! function_exists( 'et_core_clear_transients' ) ):
 function et_core_clear_transients() {
-	delete_site_transient( 'et_core_path' );
-	delete_site_transient( 'et_core_version' );
-	delete_site_transient( 'et_core_needs_old_theme_patch' );
+	delete_transient( 'et_core_path' );
+	delete_transient( 'et_core_version' );
+	delete_transient( 'et_core_needs_old_theme_patch' );
 }
 add_action( 'upgrader_process_complete', 'et_core_clear_transients', 10, 0 );
 add_action( 'switch_theme', 'et_core_clear_transients' );
@@ -135,7 +114,7 @@ function et_core_die( $message = '' ) {
 		wp_send_json_error( array( 'error' => $message ) );
 	}
 
-	die(-1);
+	wp_die();
 }
 endif;
 
@@ -207,12 +186,20 @@ function et_core_get_ip_address() {
 }
 endif;
 
+if ( ! function_exists( 'et_core_use_google_fonts' ) ) :
+function et_core_use_google_fonts() {
+	$utils              = ET_Core_Data_Utils::instance();
+	$google_api_options = get_option( 'et_google_api_settings' );
+
+	return 'on' === $utils->array_get( $google_api_options, 'use_google_fonts', 'on' );
+}
+endif;
 
 if ( ! function_exists( 'et_core_get_main_fonts' ) ) :
 function et_core_get_main_fonts() {
 	global $wp_version;
 
-	if ( version_compare( $wp_version, '4.6', '<' ) ) {
+	if ( version_compare( $wp_version, '4.6', '<' ) || ( ! is_admin() && ! et_core_use_google_fonts() ) ) {
 		return '';
 	}
 
@@ -286,8 +273,27 @@ function et_core_get_third_party_components( $group = '' ) {
 endif;
 
 
+if ( ! function_exists( 'et_core_get_memory_limit' ) ):
+/**
+ * Returns the current php memory limit in megabytes as an int.
+ *
+ * @return int
+ */
+function et_core_get_memory_limit() {
+	// Do NOT convert value to the integer, because wp_convert_hr_to_bytes() expects raw value from php_ini like 128M, 256M, 512M, etc
+	$limit = @ini_get( 'memory_limit' );
+	$mb_in_bytes = 1024*1024;
+	$bytes = max( wp_convert_hr_to_bytes( $limit ), $mb_in_bytes );
+
+	return ceil( $bytes / $mb_in_bytes );
+}
+endif;
+
+
 if ( ! function_exists( 'et_core_initialize_component_group' ) ):
 function et_core_initialize_component_group( $slug, $init_file = null ) {
+	$slug = strtolower( $slug );
+
 	if ( null !== $init_file && file_exists( $init_file ) ) {
 		// Load and run component group's init function
 		require_once $init_file;
@@ -344,6 +350,56 @@ function et_core_is_builder_used_on_current_request() {
 endif;
 
 
+if ( ! function_exists( 'et_core_is_fb_enabled' ) ):
+function et_core_is_fb_enabled() {
+	return function_exists( 'et_fb_is_enabled' ) && et_fb_is_enabled();
+}
+endif;
+
+
+/**
+ * Is Gutenberg active?
+ *
+ * @since 3.19.2 Renamed from {@see et_is_gutenberg_active()} and moved to core.
+ * @since 3.18
+ *
+ * @return bool  True - if the plugin is active
+ */
+if ( ! function_exists( 'et_core_is_gutenberg_active' ) ):
+function et_core_is_gutenberg_active() {
+	global $wp_version;
+
+	static $has_wp5_plus = null;
+
+	if ( is_null( $has_wp5_plus ) ) {
+		$has_wp5_plus = version_compare( $wp_version, '5.0-alpha1', '>=' );
+	}
+
+	return $has_wp5_plus || function_exists( 'is_gutenberg_page' );
+}
+endif;
+
+
+/**
+ * Is Gutenberg active and enabled for the current post
+ * WP 5.0 WARNING - don't use before global post has been set
+ *
+ * @since 3.19.2 Renamed from {@see et_is_gutenberg_enabled()} and moved to core.
+ * @since 3.18
+ *
+ * @return bool  True - if the plugin is active and enabled.
+ */
+if ( ! function_exists( 'et_core_is_gutenberg_enabled' ) ):
+function et_core_is_gutenberg_enabled() {
+	if ( function_exists( 'is_gutenberg_page' ) ) {
+		return et_core_is_gutenberg_active() && is_gutenberg_page() && has_filter( 'replace_editor', 'gutenberg_init' );
+	}
+
+	return et_core_is_gutenberg_active() && function_exists( 'use_block_editor_for_post' ) && use_block_editor_for_post( null );
+}
+endif;
+
+
 if ( ! function_exists( 'et_core_load_main_fonts' ) ) :
 function et_core_load_main_fonts() {
 	$fonts_url = et_core_get_main_fonts();
@@ -389,7 +445,7 @@ function et_core_maybe_patch_old_theme() {
 		return;
 	}
 
-	if ( get_site_transient( 'et_core_needs_old_theme_patch' ) ) {
+	if ( get_transient( 'et_core_needs_old_theme_patch' ) ) {
 		add_action( 'after_setup_theme', 'ET_Core_Logger::disable_php_notices', 9 );
 		add_action( 'after_setup_theme', 'ET_Core_Logger::enable_php_notices', 11 );
 		return;
@@ -407,7 +463,7 @@ function et_core_maybe_patch_old_theme() {
 	if ( version_compare( $theme_version, $themes[ $current_theme ], '<' ) ) {
 		add_action( 'after_setup_theme', 'ET_Core_Logger::disable_php_notices', 9 );
 		add_action( 'after_setup_theme', 'ET_Core_Logger::enable_php_notices', 11 );
-		set_site_transient( 'et_core_needs_old_theme_patch', true, DAY_IN_SECONDS );
+		set_transient( 'et_core_needs_old_theme_patch', true, DAY_IN_SECONDS );
 	}
 }
 endif;
@@ -450,15 +506,72 @@ function et_core_register_admin_assets() {
 	wp_register_style( 'et-core-admin', ET_CORE_URL . 'admin/css/core.css', array(), ET_CORE_VERSION );
 	wp_register_script( 'et-core-admin', ET_CORE_URL . 'admin/js/core.js', array(), ET_CORE_VERSION );
 	wp_localize_script( 'et-core-admin', 'etCore', array(
-		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'ajaxurl' => is_ssl() ? admin_url( 'admin-ajax.php' ) : admin_url( 'admin-ajax.php', 'http' ),
 		'text'    => array(
 			'modalTempContentCheck' => esc_html__( 'Got it, thanks!', ET_CORE_TEXTDOMAIN ),
 		),
 	) );
+
+	// enqueue common scripts as well
+	et_core_register_common_assets();
 }
 endif;
 add_action( 'admin_enqueue_scripts', 'et_core_register_admin_assets' );
 
+if ( ! function_exists( 'et_core_register_common_assets' ) ) :
+/**
+ * Register and Enqueue Common Core assets.
+ *
+ * @since 1.0.0
+ *
+ * @private
+ */
+function et_core_register_common_assets() {
+	// common.js needs to be located at footer after waypoint, fitvid, & magnific js to avoid broken javascript on Facebook in-app browser
+	wp_register_script( 'et-core-common', ET_CORE_URL . 'admin/js/common.js', array( 'jquery' ), ET_CORE_VERSION, true );
+	wp_enqueue_script( 'et-core-common' );
+}
+endif;
+
+// common.js needs to be loaded after waypoint, fitvid, & magnific js to avoid broken javascript on Facebook in-app browser, hence the 15 priority
+add_action( 'wp_enqueue_scripts', 'et_core_register_common_assets', 15 );
+
+if ( ! function_exists( 'et_core_noconflict_styles_gform' ) ) :
+/**
+ * Register Core styles with Gravity Forms so that they're enqueued when running on no-conflict mode
+ *
+ * @since 3.21.2
+ *
+ * @param $styles
+ *
+ * @return array
+ */
+function et_core_noconflict_styles_gform( $styles ) {
+	$styles[] = 'et-core-admin';
+
+	return $styles;
+}
+endif;
+add_filter( 'gform_noconflict_styles', 'et_core_noconflict_scripts_gform' );
+
+if ( ! function_exists( 'et_core_noconflict_scripts_gform' ) ) :
+/**
+ * Register Core scripts with Gravity Forms so that they're enqueued when running on no-conflict mode
+ *
+ * @since 3.21.2
+ *
+ * @param $scripts
+ *
+ * @return array
+ */
+function et_core_noconflict_scripts_gform( $scripts ) {
+	$scripts[] = 'et-core-admin';
+	$scripts[] = 'et-core-common';
+
+	return $scripts;
+}
+endif;
+add_filter( 'gform_noconflict_scripts', 'et_core_noconflict_scripts_gform' );
 
 if ( ! function_exists( 'et_core_security_check' ) ):
 /**
@@ -479,12 +592,17 @@ if ( ! function_exists( 'et_core_security_check' ) ):
  * @return bool|null Whether or not the checked passed if `$die` is `false`.
  */
 function et_core_security_check( $user_can = 'manage_options', $nonce_action = '', $nonce_key = '', $nonce_location = '_POST', $die = true ) {
+	$user_can     = (string) $user_can;
+	$nonce_action = (string) $nonce_action;
+	$nonce_key    = (string) $nonce_key;
+
 	if ( empty( $nonce_key ) && false === strpos( $nonce_action, '_nonce' ) ) {
 		$nonce_key = $nonce_action . '_nonce';
 	} else if ( empty( $nonce_key ) ) {
 		$nonce_key = $nonce_action;
 	}
 
+	// phpcs:disable WordPress.Security.NonceVerification.NoNonceVerification
 	switch( $nonce_location ) {
 		case '_POST':
 			$nonce_location = $_POST;
@@ -496,21 +614,35 @@ function et_core_security_check( $user_can = 'manage_options', $nonce_action = '
 			$nonce_location = $_REQUEST;
 			break;
 		default:
-			return $die ? die(-1) : false;
+			return $die ? et_core_die() : false;
 	}
+	// phpcs:enable
 
 	$passed = true;
 
-	if ( '' === $user_can && '' === $nonce_action ) {
+	if ( is_numeric( $user_can ) ) {
+		// Numeric values are deprecated in current_user_can(). We do not accept them here.
 		$passed = false;
+
+	} else if ( '' !== $nonce_action && empty( $nonce_location[ $nonce_key ] ) ) {
+		// A nonce value is required when a nonce action is provided.
+		$passed = false;
+
+	} else if ( '' === $user_can && '' === $nonce_action ) {
+		// At least one of a capability OR a nonce action is required.
+		$passed = false;
+
 	} else if ( '' !== $user_can && ! current_user_can( $user_can ) ) {
+		// Capability check failed.
 		$passed = false;
+
 	} else if ( '' !== $nonce_action && ! wp_verify_nonce( $nonce_location[ $nonce_key ], $nonce_action ) ) {
+		// Nonce verification failed.
 		$passed = false;
 	}
 
 	if ( $die && ! $passed ) {
-		die(-1);
+		et_core_die();
 	}
 
 	return $passed;
@@ -565,7 +697,7 @@ function et_core_setup( $deprecated = '' ) {
 
 	register_shutdown_function( 'ET_Core_PageResource::shutdown' );
 
-	if ( is_admin() || ! empty( $_GET['et_fb'] ) ) {
+	if ( is_admin() || ! empty( $_GET['et_fb'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.NoNonceVerification
 		add_action( 'admin_enqueue_scripts', 'et_core_load_main_styles' );
 	}
 
@@ -606,6 +738,7 @@ function et_get_allowed_localization_html_elements() {
 		'span'   => array(),
 		'div'    => array(),
 		'strong' => array(),
+		'code'   => array(),
 	);
 
 	$elements = apply_filters( 'et_allowed_localization_html_elements', $elements );
@@ -625,6 +758,19 @@ function et_get_safe_localization( $string ) {
 }
 endif;
 
+if ( ! function_exists( 'et_get_theme_version' ) ) :
+function et_get_theme_version() {
+	$theme_info = wp_get_theme();
+
+	if ( is_child_theme() ) {
+		$theme_info = wp_get_theme( $theme_info->parent_theme );
+	}
+
+	$theme_version = $theme_info->display( 'Version' );
+
+	return $theme_version;
+}
+endif;
 
 if ( ! function_exists( 'et_new_core_setup') ):
 function et_new_core_setup() {
@@ -646,6 +792,99 @@ function et_new_core_setup() {
 }
 endif;
 
+
+if ( ! function_exists( 'et_core_add_crossorigin_attribute' ) ):
+function et_core_add_crossorigin_attribute( $tag, $handle, $src ) {
+	if ( ! $handle || ! in_array( $handle, array( 'react', 'react-dom' ) ) ) {
+		return $tag;
+	}
+
+	return sprintf( '<script src="%1$s" crossorigin></script>', esc_attr( $src ) ); // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
+}
+endif;
+
+
+if ( ! function_exists( 'et_core_get_version_from_filesystem' ) ):
+/**
+ * Get the core version from the filesystem.
+ * This is necessary in cases such as Version Rollback where you cannot use
+ * a constant from memory as it is outdated or you wish to get the version
+ * not from the active (latest) core but from a different one.
+ *
+ * @param string $core_directory
+ *
+ * @return string
+ */
+function et_core_get_version_from_filesystem( $core_directory ) {
+	$version_file = $core_directory . DIRECTORY_SEPARATOR . '_et_core_version.php';
+
+	if ( ! file_exists( $version_file ) ) {
+		return '';
+	}
+
+	include $version_file;
+
+	return $ET_CORE_VERSION;
+}
+endif;
+
+if ( ! function_exists( 'et_core_replace_enqueued_style' ) ):
+/**
+ * Replace a style's src if it is enqueued.
+ *
+ * @since 3.10
+ *
+ * @param string $old_src
+ * @param string $new_src
+ * @param boolean $regex Use regex to match and replace the style src.
+ *
+ * @return void
+ */
+function et_core_replace_enqueued_style( $old_src, $new_src, $regex = false ) {
+	$styles = wp_styles();
+
+	if ( empty( $styles->registered ) ) {
+		return;
+	}
+
+	foreach ( $styles->registered as $style_handle => $style ) {
+		$match = $regex ? preg_match( $old_src, $style->src ) : $old_src === $style->src;
+		if ( ! $match ) {
+			continue;
+		}
+
+		$style_src   = $regex ? preg_replace( $old_src, $new_src, $style->src ) : $new_src;
+		$style_deps  = isset( $style->deps ) ? $style->deps : array();
+		$style_ver   = isset( $style->ver ) ? $style->ver : false;
+		$style_media = isset( $style->args ) ? $style->args : 'all';
+
+		// Deregister first, so the handle can be re-enqueued.
+		wp_deregister_style( $style_handle );
+
+		// Enqueue the same handle with the new src.
+		wp_enqueue_style( $style_handle, $style_src, $style_deps, $style_ver, $style_media );
+	}
+}
+endif;
+
+if ( ! function_exists( 'et_core_is_safe_mode_active' ) ):
+/**
+ * Check whether the Support Center's Safe Mode is active
+ *
+ * @since ?.?
+ *
+ * @see ET_Support_Center::toggle_safe_mode
+ *
+ * @return bool
+ */
+function et_core_is_safe_mode_active() {
+	$is_safe_mode_active = false;
+	if ( 'on' === get_user_meta( get_current_user_id(), '_et_support_center_safe_mode', true ) ) {
+		$is_safe_mode_active = true;
+	};
+	return $is_safe_mode_active;
+}
+endif;
 
 if ( ! function_exists( 'et_core_load_component' ) ) :
 /**
@@ -673,7 +912,7 @@ function et_core_load_component( $components ) {
 
 	$is_jetpack = isset( $_SERVER['HTTP_USER_AGENT'] ) && false !== strpos( $_SERVER['HTTP_USER_AGENT'], 'Jetpack' );
 
-	if ( ! $is_jetpack && ! is_admin() && empty( $_GET['et_fb'] ) ) {
+	if ( ! $is_jetpack && ! is_admin() && empty( $_GET['et_fb'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.NoNonceVerification
 		return true;
 	}
 

@@ -1,15 +1,21 @@
 <?php
 
 /**
- * Utility class for manipulating various data formats. Currently includes methods for
- * transforming array data to another format based on key mapping as well as methods for
- * generating XML-RPC method call strings.
+ * Utility class for manipulating various data formats. Includes methods for
+ * transforming array data to another format based on key mapping, methods for
+ * generating XML-RPC method call strings, methods for working with arrays, and more.
  *
- * @since   1.1.0
+ * @since   3.0.62
  *
  * @package ET\Core\Data
  */
 class ET_Core_Data_Utils {
+
+	private static $_instance;
+
+	private $_pick;
+	private $_pick_value = '_undefined_';
+	private $_sort_by;
 
 	/**
 	 * Generate an XML-RPC array.
@@ -39,7 +45,7 @@ class ET_Core_Data_Utils {
 		$output = '';
 
 		foreach ( $members as $name => $value ) {
-			$output .= sprintf( '<member><name>%1$s</name>%2$s</member>', $name, $this->_create_xmlrpc_value( $value ) );
+			$output .= sprintf( '<member><name>%1$s</name>%2$s</member>', esc_html( $name ), $this->_create_xmlrpc_value( $value ) );
 		}
 
 		return "<struct>{$output}</struct>";
@@ -56,6 +62,7 @@ class ET_Core_Data_Utils {
 		$output = '';
 
 		if ( is_string( $value ) ) {
+			$value = esc_html( wp_strip_all_tags( $value ) );
 			$output = "<string>{$value}</string>";
 		} else if ( is_bool( $value ) ) {
 			$value  = (int) $value;
@@ -125,20 +132,41 @@ class ET_Core_Data_Utils {
 			return false;
 		}
 
-		$directory_contents = glob( trailingslashit( $path ) . '*{,.}*', GLOB_BRACE );
 		$empty              = true;
+		$directory_contents = glob( untrailingslashit( $path ) . '/*' );
 
-		if ( false === $directory_contents ) {
-			return false;
-		}
-
-		foreach ( $directory_contents as $item ) {
+		foreach ( (array) $directory_contents as $item ) {
 			if ( ! $this->_remove_empty_directories( $item ) ) {
 				$empty = false;
 			}
 		}
 
 		return $empty ? @rmdir( $path ) : false;
+	}
+
+	public function _array_pick_callback( $item ) {
+		$pick  = $this->_pick;
+		$value = $this->_pick_value;
+
+		if ( is_array( $item ) && isset( $item[ $pick ] ) ) {
+			return '_undefined_' !== $value ? $value === $item[ $pick ] : $item[ $pick ];
+		} else if ( is_object( $item ) && isset( $item->$pick ) ) {
+			return '_undefined_' !== $value ? $value === $item->$pick : $item->$pick;
+		}
+
+		return false;
+	}
+
+	public function _array_sort_by_callback( $a, $b ) {
+		$sort_by = $this->_sort_by;
+
+		if ( is_array( $a ) ) {
+			return strcmp( $a[ $sort_by ], $b[ $sort_by ] );
+		} else if ( is_object( $a ) ) {
+			return strcmp( $a->$sort_by, $b->$sort_by );
+		}
+
+		return 0;
 	}
 
 	/**
@@ -168,8 +196,20 @@ class ET_Core_Data_Utils {
 		return true;
 	}
 
-	public function ensure_directory_exists( $path ) {
-		return file_exists( $path ) ? true : @mkdir( $path, 0755, true );
+	/**
+	 * Flattens a multi-dimensional array.
+	 *
+	 * @since 3.0.99
+	 *
+	 * @param array $array An array to flatten.
+	 *
+	 * @return array
+	 */
+	function array_flatten( array $array ) {
+		$iterator = new RecursiveIteratorIterator( new RecursiveArrayIterator( $array ) );
+		$use_keys = true;
+
+		return iterator_to_array( $iterator, $use_keys );
 	}
 
 	/**
@@ -177,30 +217,106 @@ class ET_Core_Data_Utils {
 	 *
 	 * @param array  $array   An array which contains value located at `$address`.
 	 * @param string $address The location of the value within `$array` (dot notation).
+	 * @param mixed  $default Value to return if not found. Default is an empty string.
 	 *
-	 * @return array {
-	 *     Result Array - will be empty if no value was found.
-	 *
-	 *     @type mixed $value The value found in `$array` at `$address`.
-	 * }
+	 * @return mixed The value, if found, otherwise $default.
 	 */
-	public function get_array_value_at_address( $array, $address ) {
+	public function array_get( $array, $address, $default = '' ) {
 		$keys   = explode( '.', $address );
-		$result = array();
 		$value  = $array;
 
 		while ( $key = array_shift( $keys ) ) {
-			if ( isset( $value[ $key ] ) ) {
-				$value = $value[ $key ];
-				continue;
+			if ( '[' === $key[0] && is_numeric( substr( $key, 1, -1 ) ) ) {
+				$key = (int) substr( $key, 1, -1 );
 			}
+
+			if ( ! isset( $value[ $key ] ) ) {
+				return $default;
+			}
+
+			$value = $value[ $key ];
 		}
 
-		if ( $value !== $array ) {
-			$result['value'] = $value;
+		return $value;
+	}
+
+	/**
+	 * Creates a new array containing only the items that have a key or property or only the items that
+	 * have a key or property that is equal to a certain value.
+	 *
+	 * @param array        $array   The array to pick from.
+	 * @param string|array $pick_by The key or property to look for or an array mapping the key or property
+	 *                              to a value to look for.
+	 *
+	 * @return array
+	 */
+	public function array_pick( $array, $pick_by ) {
+		if ( is_string( $pick_by ) || is_int( $pick_by ) ) {
+			$this->_pick = $pick_by;
+		} else if ( is_array( $pick_by ) && 1 === count( $pick_by ) ) {
+			$this->_pick       = key( $pick_by );
+			$this->_pick_value = array_pop( $pick_by );
+		} else {
+			return array();
 		}
 
-		return $result;
+		return array_filter( $array, array( $this, '_array_pick_callback' ) );
+	}
+
+	/**
+	 * Sets a value in a nested array using an address string (dot notation)
+	 *
+	 * @see http://stackoverflow.com/a/9628276/419887
+	 *
+	 * @param array        $array The array to modify
+	 * @param string|array $path  The path in the array
+	 * @param mixed        $value The value to set
+	 */
+	public function array_set( &$array, $path, $value ) {
+		$path_parts = is_array( $path ) ? $path : explode( '.', $path );
+		$current    = &$array;
+
+		foreach ( $path_parts as $key ) {
+			if ( ! is_array( $current ) ) {
+				$current = array();
+			}
+
+			if ( '[' === $key[0] && is_numeric( substr( $key, 1, - 1 ) ) ) {
+				$key = (int) $key;
+			}
+
+			$current = &$current[ $key ];
+		}
+
+		$current = $value;
+	}
+
+	public function array_sort_by( $array, $key_or_prop ) {
+		if ( ! is_string( $key_or_prop ) && ! is_int( $key_or_prop ) ) {
+			return $array;
+		}
+
+		$this->_sort_by = $key_or_prop;
+
+		if ( $this->is_assoc_array( $array ) ) {
+			uasort( $array, array( $this, '_array_sort_by_callback' ) );
+		} else {
+			usort( $array, array( $this, '_array_sort_by_callback' ) );
+		}
+
+		return $array;
+	}
+
+	public function ensure_directory_exists( $path ) {
+		return file_exists( $path ) ? true : @mkdir( $path, 0755, true );
+	}
+
+	public static function instance() {
+		if ( ! self::$_instance ) {
+			self::$_instance = new ET_Core_Data_Utils();
+		}
+
+		return self::$_instance;
 	}
 
 	/**
@@ -211,7 +327,7 @@ class ET_Core_Data_Utils {
 	 * @return bool
 	 */
 	public function is_assoc_array( $array ) {
-		return count( array_filter( array_keys( $array ), 'is_string' ) ) > 0;
+		return is_array( $array ) && count( array_filter( array_keys( $array ), 'is_string' ) ) > 0;
 	}
 
 	/**
@@ -254,6 +370,8 @@ class ET_Core_Data_Utils {
 			$output .= "<param>{$value}</param>";
 		}
 
+		$method_name = esc_html( $method_name );
+
 		return
 			"<?xml version='1.0' encoding='UTF-8'?>
 			<methodCall>
@@ -265,6 +383,31 @@ class ET_Core_Data_Utils {
 	}
 
 	/**
+	 * Disable XML entity loader.
+	 *
+	 * @param bool $disable
+	 *
+	 * @return void
+	 */
+	public function libxml_disable_entity_loader( $disable ) {
+		if ( function_exists( 'libxml_disable_entity_loader' ) ) {
+			libxml_disable_entity_loader( $disable );
+		}
+	}
+
+	/**
+	 * Securely use simplexml_load_string.
+	 *
+	 * @param string $data XML data string.
+	 *
+	 * @return SimpleXMLElement
+	 */
+	public function simplexml_load_string( $data ) {
+		$this->libxml_disable_entity_loader( true );
+		return simplexml_load_string( $data );
+	}
+
+	/**
 	 * Process an XML-RPC response string.
 	 *
 	 * @param $response
@@ -272,7 +415,7 @@ class ET_Core_Data_Utils {
 	 * @return mixed
 	 */
 	public function process_xmlrpc_response( $response, $skip_processing = false ) {
-		$response = simplexml_load_string( $response );
+		$response = $this->simplexml_load_string( $response );
 		$result   = array();
 
 		if ( $skip_processing ) {
@@ -331,71 +474,144 @@ class ET_Core_Data_Utils {
 	}
 
 	/**
-	 * Sets a value in a nested array using an address string (dot notation)
+	 * Whether or not a value includes another value.
 	 *
-	 * @see http://stackoverflow.com/a/9628276/419887
+	 * @param string $haystack The value to look in.
+	 * @param string $needle   The value to look for.
 	 *
-	 * @param array  $array The array to modify
-	 * @param string $path  The path in the array
-	 * @param mixed  $value The value to set
+	 * @return bool
 	 */
-	public function set_array_value_at_address( &$array, $path, &$value ) {
-		$path_parts = explode( '.', $path );
-		$current    = &$array;
-
-		foreach ( $path_parts as $key ) {
-			if ( ! is_array( $current ) ) {
-				$current = array();
-			}
-
-			$current = &$current[ $key ];
+	function includes( $haystack, $needle ) {
+		if ( is_string( $haystack ) ) {
+			return false !== strpos( $haystack, $needle );
 		}
 
-		$current = $value;
+		if ( is_object( $haystack ) ) {
+			return property_exists( $haystack, $needle );
+		}
+
+		if ( is_array( $haystack ) ) {
+			return in_array( $needle, $haystack );
+		}
+
+		return false;
+	}
+
+	public function sanitize_text_fields( $fields ) {
+		if ( ! is_array( $fields ) ) {
+			return sanitize_text_field( $fields );
+		}
+
+		$result = array();
+
+		foreach ( $fields as $field_id => $field_value ) {
+			$field_id = sanitize_text_field( $field_id );
+
+			if ( is_array( $field_value ) ) {
+				$field_value = $this->sanitize_text_fields( $field_value );
+			} else {
+				$field_value = sanitize_text_field( $field_value );
+			}
+
+			$result[ $field_id ] = $field_value;
+		}
+
+		return $result;
 	}
 
 	/**
-	 * Transforms an assoc array to/from internal/external data formats.
+	 * Recursively traverses an array and escapes the keys and values according to passed escaping function.
 	 *
-	 * @param string $data_format       The format to which the data should be transformed.
-	 * @param array  $from_data         The data to transform.
-	 * @param array  $data_keys_mapping An array mapping internal data keys to external data keys.
-	 * @param array  $exclude_keys      Keys that should be excluded from the result. Optional.
+	 * @since 3.17.3
+	 *
+	 * @param array  $values            The array to be recursively escaped.
+	 * @param string $escaping_function The escaping function to be used on keys and values. Default 'esc_html'. Optional.
 	 *
 	 * @return array
 	 */
-	public function transform_data_to( $data_format, $from_data, $data_keys_mapping, $exclude_keys = array() ) {
-		$want_our_data_format = 'our_data' === $data_format;
-		$to_data              = array();
 
-		foreach ( $data_keys_mapping as $our_data_address => $their_data_address ) {
-			$from_address = $want_our_data_format ? $their_data_address : $our_data_address;
-			$to_address   = $want_our_data_format ? $our_data_address : $their_data_address;
+	public function esc_array( $values, $escaping_function = 'esc_html' ) {
+		if ( ! is_array( $values ) ) {
+			return $escaping_function( $values );
+		}
 
-			$array_value_required = 0 === strpos( $to_address, '@_' );
-			$to_address           = $array_value_required ? str_replace( '@_', '', $to_address ) : $to_address;
+		$result = array();
+
+		foreach ( $values as $key => $value ) {
+			$key = $escaping_function( $key );
+
+			if ( is_array( $value ) ) {
+				$value = $this->esc_array( $value, $escaping_function );
+			} else {
+				$value = $escaping_function( $value );
+			}
+
+			$result[ $key ] = $value;
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Transforms an array of data into a new array based on the provided transformation definition.
+	 *
+	 * @since 3.10     Renamed from `transform_data_to` to `array_transform`.
+	 * @since 3.0.68
+	 *
+	 * @param array  $data         The data to transform.
+	 * @param array  $data_map     Transformation definition. See examples below.
+	 * @param string $direction    The direction in which to transform. Accepts '->', '<-'. Default '->'
+	 * @param array  $exclude_keys Keys that should be excluded from the result. Optional.
+	 *
+	 * @return array
+	 */
+	public function array_transform( $data, $data_map, $direction = '->', $exclude_keys = array() ) {
+		$result = array();
+
+		if ( ! in_array( $direction, array( '->', '<-' ) ) ) {
+			return $result;
+		}
+
+		foreach ( $data_map as $address_1 => $address_2 ) {
+			$from_address = '->' === $direction ? $address_1 : $address_2;
+			$to_address   = '->' === $direction ? $address_2 : $address_1;
+
+			$array_value_required = $negate_bool_value = false;
+
+			if ( 0 === strpos( $to_address, '@' ) || 0 === strpos( $from_address, '@' ) ) {
+				$array_value_required = true;
+				$to_address           = ltrim( $to_address, '@' );
+				$from_address         = ltrim( $from_address, '@' );
+
+			} else if ( 0 === strpos( $to_address, '!' ) || 0 === strpos( $from_address, '!' ) ) {
+				$negate_bool_value = true;
+				$to_address        = ltrim( $to_address, '!' );
+				$from_address      = ltrim( $from_address, '!' );
+			}
 
 			if ( ! empty( $exclude_keys ) && array_key_exists( $to_address, $exclude_keys ) ) {
 				continue;
 			}
 
-			$value = $this->get_array_value_at_address( $from_data, $from_address );
+			$value = $this->array_get( $data, $from_address, null );
 
-			if ( ! isset( $value['value'] ) ) {
+			if ( null === $value ) {
 				// Unknown key, skip it.
 				continue;
 			}
 
-			$value = $value['value'];
-
 			if ( $array_value_required && ! is_array( $value ) ) {
 				$value = array( $value );
+
+			} else if ( $negate_bool_value ) {
+				$value = (bool) $value;
+				$value = ! $value;
 			}
 
-			$this->set_array_value_at_address( $to_data, $to_address, $value );
+			$this->array_set( $result, $to_address, $value );
 		}
 
-		return $to_data;
+		return $result;
 	}
 
 	/**
@@ -405,15 +621,55 @@ class ET_Core_Data_Utils {
 	 *
 	 * @return array
 	 */
-	function xml_to_array( $xml_data ) {
+	public function xml_to_array( $xml_data ) {
 		if ( is_string( $xml_data ) ) {
-			$xml_data = simplexml_load_string( $xml_data );
+			$xml_data = $this->simplexml_load_string( $xml_data );
 		}
 
-		$json = json_encode( $xml_data );
+		$json = wp_json_encode( $xml_data );
 		return json_decode( $json, true );
 	}
 
+	/**
+	 * Make sure that in provided selector do not exist sub-selectors that targets inputs placeholders
+	 *
+	 * If they exist they should be split in an apart selector.
+	 *
+	 * @param string $selector
+	 *
+	 * @return array Return a list of selectors
+	 */
+	public function sanitize_css_placeholders( $selector ) {
+		$selectors     = explode( ',', $selector );
+		$selectors     = array_map( 'trim', $selectors );
+		$selectors     = array_filter( $selectors );
+		$main_selector = array();
+		$exceptions    = array();
+		$placeholders  = array(
+			'::-webkit-input-placeholder',
+			'::-moz-placeholder',
+			':-ms-input-placeholder',
+		);
+
+		// No need to sanitize if is a single selector or even no selectors at all
+		// Also if selectors do not contain placeholder meta-selector
+		if ( count( $selectors ) < 2 || ! preg_match( '/' . implode( '|', $placeholders ) . '/', $selector ) ) {
+			return array( $selector );
+		}
+
+		foreach ( $selectors as $selector ) {
+			foreach ( $placeholders as $placeholder ) {
+				if ( strpos( $selector, $placeholder ) !== false ) {
+					$exceptions[] = $selector;
+					continue 2;
+				}
+			}
+
+			$main_selector[] = $selector;
+		}
+
+		return array_merge( array( implode( ', ', $main_selector ) ), $exceptions );
+	}
 }
 
 
@@ -458,7 +714,7 @@ EOS;
 EOS;
 
 	$search_patterns  = array( "%{$comments}%", "%{$everything_else}%" );
-	$replace_patterns = array( '$1', '$1$2$3$4$5$6$7' );
+	$replace_patterns = array( '$1', '$1$2$3$4$5$6$7$8' );
 
 	return preg_replace( $search_patterns, $replace_patterns, $string );
 }

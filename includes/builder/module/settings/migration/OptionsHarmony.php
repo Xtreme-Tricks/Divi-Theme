@@ -3,6 +3,12 @@ class ET_Builder_Module_Settings_Migration_OptionsHarmony extends ET_Builder_Mod
 
 	public $version = '3.0.74';
 
+	public function __construct() {
+		parent::__construct();
+
+		self::$_bb_excluded_name_changes[] = 'text_orientation';
+	}
+
 	public function get_fields() {
 		return array(
 			'parallax' => array(
@@ -313,7 +319,7 @@ class ET_Builder_Module_Settings_Migration_OptionsHarmony extends ET_Builder_Mod
 		return isset( $map[ $value ] ) ? $map[ $value ] : $default;
 	}
 
-	public function migrate( $field_name, $current_value, $module_slug, $saved_value, $saved_field_name, $attrs ) {
+	public function migrate( $field_name, $current_value, $module_slug, $saved_value, $saved_field_name, $attrs, $content ) {
 		// Padding top & bottom migration to full paddings
 		if ( in_array( $module_slug, array( 'et_pb_counters', 'et_pb_post_slider', 'et_pb_fullwidth_post_slider', 'et_pb_slider', 'et_pb_fullwidth_slider' ) ) ) {
 
@@ -401,6 +407,7 @@ class ET_Builder_Module_Settings_Migration_OptionsHarmony extends ET_Builder_Mod
 
 			// Translating transparent_background into background_color
 			if ( 'background_color' === $field_name && in_array( $saved_field_name, array( 'transparent_background', 'transparent_background_fb' ) ) ) {
+				// Transparent is default for Builder Plugin, but not for theme
 				if ( 'on' === $current_value || ( et_is_builder_plugin_active() && 'default' === $current_value ) ) {
 					return 'rgba(255,255,255,0)';
 				} else {

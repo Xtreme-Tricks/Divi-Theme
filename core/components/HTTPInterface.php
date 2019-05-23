@@ -100,6 +100,7 @@ class ET_Core_HTTPRequest {
 			'METHOD'       => $this->METHOD,
 			'BODY'         => $this->BODY,
 			'IS_AUTH'      => $this->IS_AUTH,
+			'IS_JSON_BODY' => $this->JSON_BODY,
 			'OWNER'        => $this->OWNER,
 		);
 	}
@@ -138,6 +139,7 @@ class ET_Core_HTTPRequest {
 			'method'     => $this->METHOD,
 			'sslverify'  => $this->SSL_VERIFY,
 			'user-agent' => $this->USER_AGENT,
+			'timeout'    => 30,
 		);
 	}
 }
@@ -361,16 +363,20 @@ class ET_Core_HTTPInterface {
 	 * @since    1.1.0
 	 */
 	protected function _log_failed_request() {
-		ob_start();
-		var_dump( $this );
-		$response_details = ob_get_contents();
-		ob_end_clean();
-
+		$details    = print_r( $this, true );
 		$class_name = get_class( $this );
 		$msg_part   = "{$class_name} ERROR :: Remote request failed...\n\n";
-		$msg        = "{$msg_part}Details: {$response_details}";
+		$msg        = "{$msg_part}Details: {$details}";
+
+		$max_len = @ini_get( 'log_errors_max_len' );
+
+		@ini_set( 'log_errors_max_len', 0 );
 
 		ET_Core_Logger::error( $msg );
+
+		if ( $max_len ) {
+			@ini_set( 'log_errors_max_len', $max_len );
+		}
 	}
 
 	/**
@@ -380,8 +386,15 @@ class ET_Core_HTTPInterface {
 		$this->request->HEADERS['Accept'] = 'application/json';
 
 		if ( $this->request->JSON_BODY ) {
-			$this->request->BODY                    = null !== $this->request->BODY ? json_encode( $this->request->BODY ) : null;
 			$this->request->HEADERS['Content-Type'] = 'application/json';
+
+			$is_json = is_string( $this->request->BODY ) && in_array( $this->request->BODY[0], array( '[', '{' ) );
+
+			if ( $is_json || null === $this->request->BODY ) {
+				return;
+			}
+
+			$this->request->BODY = json_encode( $this->request->BODY );
 		}
 	}
 
@@ -392,7 +405,6 @@ class ET_Core_HTTPInterface {
 	 * @since    1.1.0
 	 */
 	public function make_remote_request() {
-		$cache_key = self::_get_cache_key_for_request( $this->request->URL, $this->request->BODY );
 		$response  = null;
 
 		if ( $this->expects_json && ! isset( $this->request->HEADERS['Content-Type'] ) ) {
