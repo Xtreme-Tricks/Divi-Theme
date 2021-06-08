@@ -1,19 +1,48 @@
-<script id='formservjs' src='https://iide.freshsales.io/web_forms/3359d0a0f8f3dc830c90fb7fe3c86d8ade5e244cd17b9ecba2d52727d754aeb9/form.js' crossorigin='anonymous'></script> 
+<script src='https://iide.freshsales.io/web_forms/e2000592032d1c64e4283d6143cb28b7297dce14f0c1aa9e599c909d1507efba/form.js' crossorigin='anonymous' id='fs_4503cd1a1f486a9f34b240848af3fb91d23342942989c20ddc008acd6018b557'></script> 
 <style type="text/css"> 
 
 .fserv-container {
- max-width: 150%!important;
- background-color: rgba(255, 255, 255, 0) !important;
- box-shadow: 0 0px 0px 0px rgba(156,156,156,.07)!important;
+ max-width: 100% !important;
+ background-color: #fff0 !important;
+ box-shadow: rgba(156,156,156,.07)!important;
+  border-radius: 10px 10px 10px 10px;
+ margin-bottom: -8%;
+  padding:30px 10px!important;
 }
 
+.fserv-container .fserv-field input::-webkit-input-placeholder {
+ color: #58595b !important;
+}
+    
+.fs_e2000592032d1c64e4283d6143cb28b7297dce14f0c1aa9e599c909d1507efba .fserv-container{
+ font-family: Inherit !important;
+ background-color: #fff0 !important;
+width: 100% !important;
+}
+
+button[type="submit"].fserv-button-submit {
+
+ font-family: Open Sans;
+ font-size: 18px !important;
+ width: 18%;
+ margin: 0px 0px 0px -175px;
+text-align:center!important;
+ }
+  .fserv-field+div:not(.fserv-field) {
+    padding:15px 15px 0px!important;
+  }
+.fs_e2000592032d1c64e4283d6143cb28b7297dce14f0c1aa9e599c909d1507efba button[type="submit"].fserv-button-submit {
+ background-color: #11B5C1!important;
+    color: #fff!important;
+    padding: 10px!important;
+   border-radius:5px!important;
+}
 .fserv-container .fserv-form {
  display: flex;
  flex-wrap: wrap;
  width: 120%;
- margin-left: -8%;
+margin-left: -1.5% !important;
 }
-
 .fserv-container .fserv-form .fserv-field+.fserv-field {
  margin-top: 5px;
 }
@@ -35,33 +64,34 @@
  border-radius: 5px;
  line-height: 18px;
  margin-right: 2.5px;
- font-size: 16px;
- font-family: lato;
+ font-size: 15px !important;
+ font-family: Open Sans !important;
  height: 40px!important;
  color: #000!important;
- width: 125% !important;
- background-color: rgba(255,255,255,.5)!important;
- border: #fff!important;
+ width: 120% !important;
+background-color: rgba(255, 255, 255, 0.85) !important;
+ border: 1px solid #11B5C1!important;
  text-align: center!important;
+  border-radius:5px!important;
 }
 
 .fserv-field .select2-container--default .select2-selection--single {
  border-radius: 5px;
  line-height: 18px;
  margin-right: 2.5px;
- font-size: 14px;
- font-family: lato;
+ font-size: 15px;
+ font-family: Open Sans;
  height: 40px!important;
  color: #000!important;
  width: 178%!important;
- background-color: rgba(255,255,255,.5)!important;
+background-color: rgba(255, 255, 255, 0.74) !important;
  border: #fff!important;
  text-align: center!important;
 }
 
 .fserv-container .fserv-label, .fserv-container button {
- font-size: 18px!important;
- font-family: lato;
+ font-size: 15px!important;
+ font-family: Open Sans;
  color: #fff!important;
 }
 
@@ -73,6 +103,21 @@
  position: relative;
  vertical-align: middle;
  min-width: 80%;
+}
+
+
+.fserv-container button {
+ background: 0 0;
+ background-color: rgba(0, 0, 0, 0);
+ border: none;
+ border-radius: 2px;
+ cursor: pointer;
+ height: 50px;
+ letter-spacing: 0px !important;
+ line-height: 25px;
+ overflow: hidden;
+ padding: 0 24px;
+ width: auto;
 }
 
 .fserv-container .fserv-label 
@@ -119,14 +164,13 @@
 button[type="submit"].fserv-button-submit 
 {
  background-color: #27aae100 !important;
- border: 1px solid #fff;
- font-family: lato;
- font-size: 16px !important;
+ font-family: Open Sans;
+ font-size: 15px !important;
 }
 
 button[type="submit"].fserv-button-submit:hover {
- font-family: lato;
- font-size: 16px !important;
+ font-family: Open Sans;
+ font-size: 15px !important;
 }
 
 .fserv-field .select2-container--default .select2-search--dropdown .select2-search__field {
@@ -145,19 +189,60 @@ button[type="submit"].fserv-button-submit:hover {
  display: none;
 }
 
+.fs_4503cd1a1f486a9f34b240848af3fb91d23342942989c20ddc008acd6018b557 .fserv-form-description{
+  color: #fff !important;
+font-family: Open Sans;
+font-size: 15px;
+text-align: center;
+}
+
+.fserv-form-name{
+  font-size: 35px !important;
+    margin: 12px 5px!important;
+    padding: 10px 20px!important;
+    text-align: center !important;
+    text-transform: capitalize;
+    font-family: Roboto;
+}
+
 /*Mobile CSS */
 
-@media screen and (max-width:910px) 
+@media only screen and (max-width:910px) 
 {
+  button[type="submit"].fserv-button-submit {
+ margin: 0px;
+ }
+  .fserv-container .fserv-form {
+ width: 50%;
+margin: 0px!important;
+    margin-left:0px!important;
+}
+  .fserv-field {
+    padding:0px 10px!important;
+  }
  .fserv-container .fserv-form 
  {
  display: inline-block;
+
+   width:100%!important;
  }
+  .fs_e2000592032d1c64e4283d6143cb28b7297dce14f0c1aa9e599c909d1507efba .fserv-container{
+width: 100% !important;
+}
+
+
+ .fs_4503cd1a1f486a9f34b240848af3fb91d23342942989c20ddc008acd6018b557 .fserv-form-description{
+  color: #fff !important;
+font-family: Open Sans;
+font-size: 10px;
+text-align: center;
+line-height: 1.5em;
+}
 
  .fserv-container div 
  {
  margin-top: 5px;
- margin-bottom: 35px!important;
+ margin-bottom: 20px!important;
  }
  .fserv-container .fserv-label
  {
@@ -170,6 +255,7 @@ button[type="submit"].fserv-button-submit:hover {
  .fserv-container .fserv-input-text 
  {
  width: 100% !important;
+   margin:auto!important;
  } 
 
  .fserv-container .fserv-label 
@@ -218,8 +304,45 @@ button[type="submit"].fserv-button-submit:hover {
  border: 0px solid #aaa;
  display: none;
  }
+
+ button[type="submit"].fserv-button-submit 
+ {
+ background-color: #fff !important;
+ font-family: Open Sans;
+ font-size: 15px !important;
+ color: #3b68aa !important;
+ width: 83%;
+ margin-right: 1.5%;
+ }
+  .fs_e2000592032d1c64e4283d6143cb28b7297dce14f0c1aa9e599c909d1507efba .fserv-form-name {
+    color:#000!important;
+  }
+ .fserv-form-name{
+    font-size: 23px !important;
+      margin: 0 0 20px;
+      padding: 10px 0px!important;
+      text-align: center !important;
+      text-transform: capitalize;
+      font-family: Roboto;
+    }
 }
+@media screen and (min-width:2560px) {
 
+  .fserv-container .fserv-form {
+     display: flex;
+     flex-wrap: wrap;
+     width: 120%;
+    margin-left: 2% !important;
+  }
 
+  button[type="submit"].fserv-button-submit {
+    background-color: #fff !important;
+    font-family: Open Sans;
+    font-size: 15px !important;
+    color: #3b68aa !important;
+    width: 18%;
+    margin-right: 19%;
 
+  }
+}
 </style>
